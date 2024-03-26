@@ -3,7 +3,7 @@ import { Box, Button, Heading, Stack } from "@chakra-ui/react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-export default function () {
+export default function Nav() {
   const [pageY, setPageY] = useState(0);
   const navRef: any = useRef();
 
