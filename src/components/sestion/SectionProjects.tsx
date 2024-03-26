@@ -5,7 +5,7 @@ import Title from "../Title";
 
 export default function SectionProjects() {
   return (
-    <Box px={{ base: 8, md: 20 }}>
+    <Box id="project" px={{ base: 8, md: 20 }}>
       <Title content="Project" />
       <Box className="flex justify-between flex-wrap gap-y-10">
         <Project />

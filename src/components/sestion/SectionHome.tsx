@@ -4,6 +4,7 @@ import React from "react";
 export default function SectionHome() {
   return (
     <Stack
+      id="home"
       direction={"row"}
       justifyContent={{ base: "center", md: "space-between" }}
       alignItems={{ base: "start", md: "center" }}

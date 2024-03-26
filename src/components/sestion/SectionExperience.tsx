@@ -5,7 +5,7 @@ import Title from "../Title";
 
 export default function SectionExperience() {
   return (
-    <Box px={{ base: 8, md: 20 }}>
+    <Box id="experience" px={{ base: 8, md: 20 }}>
       <Title content="Experience" />
       <ExperienceContent
         company="PT Chakra Radha Mustika"

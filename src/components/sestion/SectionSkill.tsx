@@ -24,6 +24,7 @@ export default function SectionSkill() {
   ];
   return (
     <Box
+      id="skill"
       bg={"rgba(255, 181, 52, 0.1)"}
       px={{ base: 8, md: 20 }}
       pb={{ base: 10, md: 20 }}

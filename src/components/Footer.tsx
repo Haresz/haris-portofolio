@@ -2,14 +2,15 @@ import { Box, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import {
   LinkedinLogo,
   GithubLogo,
-  TelegramLogo,
-  FacebookLogo,
+  WhatsappLogo,
+  Envelope,
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <Box
+      id="contact"
       className="w-full"
       mt={32}
       px={{ base: 8, md: 20 }}
@@ -37,13 +38,13 @@ export default function Footer() {
           <LinkedinLogo size={60} />
         </Link>
         <Link href={""}>
+          <WhatsappLogo size={60} />
+        </Link>
+        <Link href={""}>
+          <Envelope size={60} />
+        </Link>
+        <Link href={""}>
           <GithubLogo size={60} />
-        </Link>
-        <Link href={""}>
-          <TelegramLogo size={60} />
-        </Link>
-        <Link href={""}>
-          <FacebookLogo size={60} />
         </Link>
       </Stack>
     </Box>

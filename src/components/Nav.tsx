@@ -51,11 +51,11 @@ export default function () {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Link href={"/"}> Home </Link>
-          <Link href={"/"}> Experience </Link>
-          <Link href={"/"}> Skill </Link>
-          <Link href={"/"}> Project </Link>
-          <Link href={"/"}>
+          <Link href={"#home"}> Home </Link>
+          <Link href={"#experience"}> Experience </Link>
+          <Link href={"#skill"}> Skill </Link>
+          <Link href={"#project"}> Project </Link>
+          <Link href={"#contact"}>
             <Button
               bg={"rgb(255 181 52)"}
               color={"white"}
