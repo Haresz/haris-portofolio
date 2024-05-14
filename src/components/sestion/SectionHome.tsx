@@ -1,7 +1,22 @@
-import { Stack, Heading, Button, Text, Image } from "@chakra-ui/react";
+"use client";
+import {
+  Stack,
+  Heading,
+  Button,
+  Text,
+  Image,
+  HStack,
+  CircularProgress,
+  CircularProgressLabel,
+} from "@chakra-ui/react";
+import useDownloader from "react-use-downloader";
 import React from "react";
 
 export default function SectionHome() {
+  const { download } = useDownloader();
+
+  const fileUrl = "/MuhammadHaris_CV.pdf";
+  const filename = "MuhammadHaris_CV.pdf";
   return (
     <Stack
       id="home"
@@ -51,6 +66,7 @@ export default function SectionHome() {
             transition: "all 0.5s ease-out",
             boxShadow: "0 0",
           }}
+          onClick={() => download(fileUrl, filename)}
         >
           Download CV
         </Button>

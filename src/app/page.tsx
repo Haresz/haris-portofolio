@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import SectionEducation from "@/components/sestion/SectionEducation";
 import SectionExperience from "@/components/sestion/SectionExperience";
 import SectionHome from "@/components/sestion/SectionHome";
 import SectionProjects from "@/components/sestion/SectionProjects";
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <SectionHome />
       <SectionExperience />
+      <SectionEducation />
       <SectionSkill />
       <SectionProjects />
       <Footer />

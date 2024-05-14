@@ -34,16 +34,20 @@ export default function Footer() {
         or in my sosmed
       </Text>
       <Stack direction={"row"} flexWrap={"wrap"} gap={8}>
-        <Link href={""}>
+        <Link href={"https://www.linkedin.com/in/haris-fikri-75144b207/"}>
           <LinkedinLogo size={60} />
         </Link>
-        <Link href={""}>
+        <Link href={"https://wa.me/+6282225384814"}>
           <WhatsappLogo size={60} />
         </Link>
-        <Link href={""}>
+        <Link
+          href={
+            "https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=muhammadharisal259@gmail.com"
+          }
+        >
           <Envelope size={60} />
         </Link>
-        <Link href={""}>
+        <Link href={"https://github.com/Haresz"}>
           <GithubLogo size={60} />
         </Link>
       </Stack>

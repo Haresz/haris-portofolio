@@ -39,6 +39,7 @@ export default function Nav() {
       backgroundColor={"white"}
       boxShadow="md"
       className="container-nav"
+      zIndex={9999}
       ref={navRef}
     >
       <Heading flex={1} as="h4" size="md">

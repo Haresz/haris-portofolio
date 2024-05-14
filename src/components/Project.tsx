@@ -12,22 +12,36 @@ import {
   ModalOverlay,
   Stack,
   useDisclosure,
+  Text,
+  Image,
 } from "@chakra-ui/react";
 import { BookOpenText, LinkBreak, Code } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import React from "react";
 
-export default function Project() {
+export default function Project(props: {
+  title: string;
+  description: string;
+  tools: any;
+  teams: any | undefined;
+  url: string;
+  code: string | undefined;
+  image: string;
+}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { title, description, url, code, tools, teams, image } = props;
+
+  console.log(url);
 
   return (
     <div className="container-project md:w-auto w-full">
-      <Box
-        className=" md:w-[600px] w-full md:h-[300px] h-[200px]"
-        bg={"rgba(255, 181, 52, 0.1)"}
+      <Image
+        className="md:w-[600px] w-full md:h-[300px] h-[200px] shadow-lg rounded-sm"
+        objectFit="cover"
+        src={image}
       />
-      <Heading mt={4} as="h3" size="lg">
-        Project Title
+      <Heading mt={4} as="h3" size="md">
+        {title}
       </Heading>
       <Stack
         className="text-primary underline text-lg mt-2"
@@ -37,80 +51,116 @@ export default function Project() {
       >
         <div className="flex">
           <BookOpenText size={28} />
-          <Link href={""} onClick={onOpen} className="ml-1">
+          <Text onClick={onOpen} className="ml-1 cursor-pointer">
             study case
-          </Link>
+          </Text>
         </div>
-        <div className="flex">
-          <LinkBreak size={28} />
-          <Link className="ml-1" href={"/"}>
-            visited
-          </Link>
-        </div>
-        <div className="flex">
-          <Code size={28} />
-          <Link className="ml-1" href={"/"}>
-            code
-          </Link>
-        </div>
+        {url ? (
+          <div className="flex">
+            <LinkBreak size={28} />
+            <Link className="ml-1" href={url}>
+              visited
+            </Link>
+          </div>
+        ) : null}
+        {code ? (
+          <div className="flex">
+            <Code size={28} />
+            <Link className="ml-1" href={"/"}>
+              code
+            </Link>
+          </div>
+        ) : null}
       </Stack>
-      <Modal scrollBehavior="inside" isOpen={isOpen} onClose={onClose}>
+      <Modal
+        scrollBehavior="inside"
+        isOpen={isOpen}
+        onClose={onClose}
+        isCentered
+      >
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Title</ModalHeader>
+        <ModalContent maxH={500}>
+          <ModalHeader>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
-            deserunt error placeat totam unde suscipit dolorem dolorum, sunt
-            aperiam quos. Ea consequatur voluptatum ipsam. Qui dignissimos amet
-            recusandae ratione veniam. Doloremque, sint obcaecati?
-            Necessitatibus repudiandae tempore quo suscipit labore sit
-            blanditiis consequatur. Explicabo corrupti perspiciatis, neque
-            doloremque nisi quo optio esse deleniti atque iure odit tempore
-            totam at, nulla ipsum. Dicta, amet nam. Eligendi, voluptatum ad? Ex
-            consectetur, sint nesciunt doloribus impedit perferendis hic quis
-            iure consequuntur officiis. Maxime, placeat exercitationem
-            laudantium commodi assumenda vero repellat nam cupiditate
-            necessitatibus! Aperiam. Culpa, vero incidunt ab quo facilis sit
-            ipsa, sed rem labore in asperiores repellendus consectetur
-            temporibus minus aut? Alias asperiores accusamus eum in officiis
-            praesentium molestias dolores, doloremque deleniti ea. Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Accusantium suscipit
-            eum, magnam enim voluptas reiciendis voluptatum pariatur harum
-            temporibus quos, sunt nemo asperiores iusto ex ipsum fugit. Beatae,
-            consectetur iure. Harum officiis incidunt expedita beatae dolore,
-            facere cumque voluptate suscipit quaerat eum amet, nobis iste odio
-            cupiditate non necessitatibus voluptatum atque perspiciatis
-            asperiores deserunt! Cum in doloremque saepe suscipit eligendi!
-            Aliquam velit pariatur officia eum magnam quod consequuntur, nostrum
-            doloremque placeat dolorem temporibus tempore sequi recusandae sed
-            reiciendis aliquid natus? Eaque, obcaecati qui hic excepturi sit
-            velit magnam totam doloribus. Illo quaerat voluptates obcaecati
-            possimus ipsum eveniet eius beatae tenetur laboriosam, error
-            blanditiis sequi a voluptatem mollitia eum delectus voluptas,
-            laborum enim quas? Cupiditate perferendis iure quis repellat
-            pariatur debitis. Id voluptatem eum, doloribus, earum, illum
-            repellendus perferendis optio ut ex quo nostrum fugit omnis tempora
-            debitis. Suscipit, impedit maxime provident distinctio ab, incidunt,
-            accusantium doloremque facilis architecto veniam est!
+            <Box>
+              <Heading mt={4} as="h3" size="sm">
+                Project Description:
+              </Heading>
+              <Text mt={2}> {description}</Text>
+            </Box>
+            <Box>
+              {tools ? (
+                <>
+                  <Heading mt={4} as="h3" size="sm">
+                    Technologies Used:
+                  </Heading>
+                  {tools.map(
+                    (tool: { title: string; desc: string }, index: number) => {
+                      return (
+                        <Box key={index} mt={4}>
+                          <Heading
+                            fontWeight={"medium"}
+                            display={"inline"}
+                            as="h3"
+                            size="sm"
+                          >
+                            {tool.title}
+                          </Heading>
+                          <Text display={"inline"}>{tool.desc}</Text>
+                        </Box>
+                      );
+                    }
+                  )}
+                </>
+              ) : null}
+            </Box>
+            <Box>
+              <Heading mt={4} as="h3" size="sm">
+                Team Collaboration::
+              </Heading>
+              {teams
+                ? teams.map(
+                    (tool: { title: string; desc: string }, index: number) => {
+                      return (
+                        <Box key={index} mt={4}>
+                          <Heading
+                            fontWeight={"medium"}
+                            display={"inline"}
+                            as="h3"
+                            size="sm"
+                          >
+                            {tool.title}
+                          </Heading>
+                          <Text display={"inline"}>{tool.desc}</Text>
+                        </Box>
+                      );
+                    }
+                  )
+                : null}
+            </Box>
             <Stack
               className="text-primary underline text-lg mt-2"
               gap={4}
               justifyContent={"start"}
               direction={"row"}
             >
-              <div className="flex">
-                <LinkBreak size={28} />
-                <Link className="ml-1" href={"/"}>
-                  visited
-                </Link>
-              </div>
-              <div className="flex">
-                <Code size={28} />
-                <Link className="ml-1" href={"/"}>
-                  code
-                </Link>
-              </div>
+              {url ? (
+                <div className="flex">
+                  <LinkBreak size={28} />
+                  <Link className="ml-1" href={url}>
+                    visited
+                  </Link>
+                </div>
+              ) : null}
+              {code ? (
+                <div className="flex">
+                  <Code size={28} />
+                  <Link className="ml-1" href={"/"}>
+                    code
+                  </Link>
+                </div>
+              ) : null}
             </Stack>
           </ModalBody>
 
