@@ -66,7 +66,7 @@ export default function Project(props: {
         {code ? (
           <div className="flex">
             <Code size={28} />
-            <Link className="ml-1" href={"/"}>
+            <Link className="ml-1" href={code}>
               code
             </Link>
           </div>
@@ -116,11 +116,12 @@ export default function Project(props: {
               ) : null}
             </Box>
             <Box>
-              <Heading mt={4} as="h3" size="sm">
-                Team Collaboration::
-              </Heading>
-              {teams
-                ? teams.map(
+              {teams ? (
+                <>
+                  <Heading mt={4} as="h3" size="sm">
+                    Team Collaboration::
+                  </Heading>
+                  {teams.map(
                     (tool: { title: string; desc: string }, index: number) => {
                       return (
                         <Box key={index} mt={4}>
@@ -136,8 +137,9 @@ export default function Project(props: {
                         </Box>
                       );
                     }
-                  )
-                : null}
+                  )}
+                </>
+              ) : null}
             </Box>
             <Stack
               className="text-primary underline text-lg mt-2"
@@ -156,7 +158,7 @@ export default function Project(props: {
               {code ? (
                 <div className="flex">
                   <Code size={28} />
-                  <Link className="ml-1" href={"/"}>
+                  <Link className="ml-1" href={code}>
                     code
                   </Link>
                 </div>
