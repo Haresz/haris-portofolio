@@ -23,6 +23,7 @@ export default function SectionEducation() {
       <ExperienceContent
         company="Purwadhika Digital Technology School"
         position="Fullstack web development"
+        city="Online"
         date="2024"
         desc={[
           "Mastered web development tools: Express, Node.js, Redux, Next.js, React.js, and Tailwind CSS.",

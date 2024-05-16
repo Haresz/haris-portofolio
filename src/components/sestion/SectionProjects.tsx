@@ -88,24 +88,6 @@ export default function SectionProjects() {
           teams={undefined}
           image={"/project2.jpg"}
         />
-        <Project
-          title={""}
-          description={""}
-          url={""}
-          code={""}
-          tools={""}
-          teams={undefined}
-          image={""}
-        />
-        <Project
-          title={""}
-          description={""}
-          url={""}
-          code={""}
-          tools={""}
-          teams={undefined}
-          image={""}
-        />
       </Box>
     </Box>
   );
