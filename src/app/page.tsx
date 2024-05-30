@@ -6,6 +6,7 @@ import SectionHome from "@/components/sestion/SectionHome";
 import SectionProjects from "@/components/sestion/SectionProjects";
 import SectionSkill from "@/components/sestion/SectionSkill";
 import Head from "next/head";
+import { Box, Image, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (

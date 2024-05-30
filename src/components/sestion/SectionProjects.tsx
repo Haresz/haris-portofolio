@@ -41,6 +41,38 @@ export default function SectionProjects() {
           image={"/project1.jpg"}
         />
         <Project
+          title={"XYZ Company Profile"}
+          description={
+            "This project is a company profile for XYZ Company. The web application provides information about the company's history, team, services, and contact details. It is built using the latest web technologies to ensure a smooth and engaging user experience."
+          }
+          url={"https://xyz-company-cyan.vercel.app/"}
+          code={"https://github.com/Haresz/xyz-company"}
+          tools={[
+            {
+              title: "Next.js: ",
+              desc: "A React framework for building server-side rendered and statically generated web applications.",
+            },
+            {
+              title: "Chakra UI: ",
+              desc: "A simple, modular, and accessible component library for React applications.",
+            },
+            {
+              title: "Redux Toolkit: ",
+              desc: " The official, opinionated, batteries-included toolset for efficient Redux development.",
+            },
+            {
+              title: "Axios: ",
+              desc: "A promise-based HTTP client for making API requests.",
+            },
+            {
+              title: "Framer Motion:",
+              desc: " A library for creating smooth animations in React applications.",
+            },
+          ]}
+          teams={undefined}
+          image={"/project3.jpg"}
+        />
+        <Project
           title={"The Blog"}
           description={
             "Website Blog is a web application developed using Next.js framework, Chakra UI for styling, and Redux Toolkit for state management. It allows users to create, edit, and view blog posts. The application provides a user-friendly interface with features like pagination and responsive design."
