@@ -24,7 +24,7 @@ export default function Project(props: {
   description: string;
   tools: any;
   teams: any | undefined;
-  url: string;
+  url: string | undefined;
   code: string | undefined;
   image: string;
 }) {

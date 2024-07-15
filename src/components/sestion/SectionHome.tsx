@@ -5,9 +5,6 @@ import {
   Button,
   Text,
   Image,
-  HStack,
-  CircularProgress,
-  CircularProgressLabel,
 } from "@chakra-ui/react";
 import useDownloader from "react-use-downloader";
 import React from "react";

@@ -120,6 +120,62 @@ export default function SectionProjects() {
           teams={undefined}
           image={"/project2.jpg"}
         />
+        <Project
+          title={"The BlogEvent Management"}
+          description={
+            "The main goal of the MVP is to create a simple and functional event management platform that allows event organizers to create and promote events, while attendees can browse and register for those events."
+          }
+          url={undefined}
+          code={"https://github.com/Haresz/website-blog"}
+          tools={[
+            {
+              title: "Next.js: ",
+              desc: "A React framework for building server-side rendered and statically generated web applications.",
+            },
+            {
+              title: "Chakra UI: ",
+              desc: "A simple, modular, and accessible component library for React applications.",
+            },
+            {
+              title: "Redux Toolkit: ",
+              desc: " The official, opinionated, batteries-included toolset for efficient Redux development.",
+            },
+            {
+              title: "Axios: ",
+              desc: "A promise-based HTTP client for making API requests.",
+            },
+            {
+              title: "Formik: ",
+              desc: "A form library for React that helps with form handling and validation.",
+            },
+            {
+              title: "Yup: ",
+              desc: "A schema-based validation library for JavaScript.",
+            },
+            {
+              title: "js-cookie: ",
+              desc: "A JavaScript API for handling browser cookies.",
+            },
+            {
+              title: "TypeScript: ",
+              desc: "A superset of JavaScript that adds static typing, allowing developers to catch errors early during development and enhance code quality.",
+            },
+            {
+              title: "MySQL:",
+              desc: "A popular open-source relational database management system (RDBMS) that uses SQL for querying and managing data.",
+            },
+            {
+              title: "Prisma ORM:",
+              desc: "A modern database toolkit and ORM (Object-Relational Mapping) for TypeScript and JavaScript, simplifying database access and schema management.",
+            },
+            {
+              title: "Express.js:",
+              desc: "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.",
+            },
+          ]}
+          teams={undefined}
+          image={"/project4.jpg"}
+        />
       </Box>
     </Box>
   );
