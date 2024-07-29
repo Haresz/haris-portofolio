@@ -176,6 +176,134 @@ export default function SectionProjects() {
           teams={undefined}
           image={'/project4.jpg'}
         />
+        <Project
+          title={'Resthere'}
+          description={`RestHere: Your Ideal Place to Rest
+RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a “stay for everyone” philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.`}
+          url={'https://jcwdol130205.purwadhikabootcamp.com/'}
+          code={'https://github.com/fabianindra/finalproject'}
+          tools={[
+            {
+              title: 'Next.js',
+              desc: 'A React framework for building server-side rendered and statically generated web applications.',
+            },
+            {
+              title: 'Jira',
+              desc: 'A project management tool used for tracking issues, bugs, and project progress.',
+            },
+            {
+              title: 'Redux Thunk',
+              desc: 'A middleware for Redux that allows for handling asynchronous actions.',
+            },
+            {
+              title: 'Redux.js',
+              desc: 'A state management library for JavaScript applications, often used with React.',
+            },
+            {
+              title: 'Axios',
+              desc: 'A promise-based HTTP client for making API requests.',
+            },
+            {
+              title: 'Agile Development',
+              desc: 'A methodology for iterative and incremental software development, emphasizing collaboration and flexibility.',
+            },
+            {
+              title: 'Tailwind CSS',
+              desc: 'A utility-first CSS framework for creating custom designs without leaving your HTML.',
+            },
+            {
+              title: 'React.js',
+              desc: 'A JavaScript library for building user interfaces, particularly single-page applications.',
+            },
+            {
+              title: 'React Hooks',
+              desc: 'A feature in React that allows you to use state and other React features without writing a class.',
+            },
+            {
+              title: 'TypeScript',
+              desc: 'A superset of JavaScript that adds static typing, allowing developers to catch errors early during development and enhance code quality.',
+            },
+            {
+              title: 'Chakra UI',
+              desc: 'A simple, modular, and accessible component library for React applications.',
+            },
+            {
+              title: 'Leaflet',
+              desc: 'An open-source JavaScript library for interactive maps.',
+            },
+            {
+              title: 'Leaflet.js',
+              desc: 'The JavaScript implementation of the Leaflet library for interactive maps.',
+            },
+            {
+              title: 'Formik',
+              desc: 'A form library for React that helps with form handling and validation.',
+            },
+            {
+              title: 'Yup',
+              desc: 'A schema-based validation library for JavaScript.',
+            },
+            {
+              title: 'Express.js',
+              desc: 'A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications.',
+            },
+            {
+              title: 'Teamwork',
+              desc: 'A project management and collaboration tool designed to enhance team productivity.',
+            },
+            {
+              title: 'Prisma ORM',
+              desc: 'A modern database toolkit and ORM (Object-Relational Mapping) for TypeScript and JavaScript, simplifying database access and schema management.',
+            },
+            {
+              title: 'nodemon',
+              desc: 'A utility that monitors for changes in files and automatically restarts the server.',
+            },
+            {
+              title: 'MySQL',
+              desc: 'A popular open-source relational database management system (RDBMS) that uses SQL for querying and managing data.',
+            },
+            {
+              title: 'nodemailer',
+              desc: 'A module for Node.js applications to send emails.',
+            },
+            {
+              title: 'cors',
+              desc: 'A middleware for enabling Cross-Origin Resource Sharing (CORS) in Node.js applications.',
+            },
+            {
+              title: 'Multer',
+              desc: 'A middleware for handling `multipart/form-data`, primarily used for file uploads.',
+            },
+            {
+              title: 'Cron',
+              desc: 'A time-based job scheduler in Unix-like operating systems for executing scheduled tasks.',
+            },
+            {
+              title: 'Google OAuth2',
+              desc: 'An authentication protocol for allowing secure access to Google services using OAuth2.',
+            },
+            {
+              title: 'JSON Web Token (JWT)',
+              desc: 'A compact, URL-safe means of representing claims to be transferred between two parties.',
+            },
+            {
+              title: 'bcrypt',
+              desc: 'A library for hashing passwords and comparing hashed passwords securely.',
+            },
+            {
+              title: 'Passport',
+              desc: 'An authentication middleware for Node.js that supports a variety of authentication strategies.',
+            },
+          ]}
+          teams={[
+            {
+              title: 'Fabian Winandi:',
+              desc: 'In our team, both Fabian and I work as Fullstack Web Developers. We focus on creating a solid and organized structure for our projects by implementing a well-defined foldering system. This approach ensures efficient collaboration and streamlined development processes, enhancing productivity and consistency across our projects.',
+            },
+          ]}
+          image={'/project5.png'}
+        />
       </Box>
     </Box>
   );

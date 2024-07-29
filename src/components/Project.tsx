@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
   Box,
   Button,
@@ -14,10 +14,10 @@ import {
   useDisclosure,
   Text,
   Image,
-} from "@chakra-ui/react";
-import { BookOpenText, LinkBreak, Code } from "@phosphor-icons/react/dist/ssr";
-import Link from "next/link";
-import React from "react";
+} from '@chakra-ui/react';
+import { BookOpenText, LinkBreak, Code } from '@phosphor-icons/react/dist/ssr';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Project(props: {
   title: string;
@@ -30,8 +30,6 @@ export default function Project(props: {
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { title, description, url, code, tools, teams, image } = props;
-
-  console.log(url);
 
   return (
     <div className="container-project md:w-auto w-full">
@@ -46,8 +44,8 @@ export default function Project(props: {
       <Stack
         className="text-primary underline text-lg mt-2"
         gap={4}
-        justifyContent={"start"}
-        direction={"row"}
+        justifyContent={'start'}
+        direction={'row'}
       >
         <div className="flex">
           <BookOpenText size={28} />
@@ -100,17 +98,17 @@ export default function Project(props: {
                       return (
                         <Box key={index} mt={4}>
                           <Heading
-                            fontWeight={"medium"}
-                            display={"inline"}
+                            fontWeight={'medium'}
+                            display={'inline'}
                             as="h3"
                             size="sm"
                           >
                             {tool.title}
                           </Heading>
-                          <Text display={"inline"}>{tool.desc}</Text>
+                          <Text display={'inline'}>{tool.desc}</Text>
                         </Box>
                       );
-                    }
+                    },
                   )}
                 </>
               ) : null}
@@ -126,17 +124,17 @@ export default function Project(props: {
                       return (
                         <Box key={index} mt={4}>
                           <Heading
-                            fontWeight={"medium"}
-                            display={"inline"}
+                            fontWeight={'medium'}
+                            display={'inline'}
                             as="h3"
                             size="sm"
                           >
                             {tool.title}
                           </Heading>
-                          <Text display={"inline"}>{tool.desc}</Text>
+                          <Text display={'inline'}>{tool.desc}</Text>
                         </Box>
                       );
-                    }
+                    },
                   )}
                 </>
               ) : null}
@@ -144,8 +142,8 @@ export default function Project(props: {
             <Stack
               className="text-primary underline text-lg mt-2"
               gap={4}
-              justifyContent={"start"}
-              direction={"row"}
+              justifyContent={'start'}
+              direction={'row'}
             >
               {url ? (
                 <div className="flex">
@@ -168,14 +166,14 @@ export default function Project(props: {
 
           <ModalFooter>
             <Button
-              bg={"rgb(255 181 52)"}
-              color={"white"}
+              bg={'rgb(255 181 52)'}
+              color={'white'}
               px={8}
               _hover={{
-                bg: "white",
-                color: "rgb(255 181 52)",
-                border: "1px solid rgb(255 181 52)",
-                transition: "all 0.5s ease-out",
+                bg: 'white',
+                color: 'rgb(255 181 52)',
+                border: '1px solid rgb(255 181 52)',
+                transition: 'all 0.5s ease-out',
               }}
               onClick={onClose}
             >
