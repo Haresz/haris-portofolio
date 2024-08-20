@@ -304,6 +304,74 @@ RestHere is a user-friendly platform for booking hotels, villas, and homestays. 
           ]}
           image={'/project5.png'}
         />
+        <Project
+          title={'Quiser'}
+          description={`Quiser: Simplifying Your Learning Journey
+Quiser is an intuitive platform designed to create and manage quizzes effortlessly. Aimed at enhancing the learning experience, it offers a clean and user-friendly interface that allows users to focus on the content. Whether for education, training, or fun, Quiser enables the creation of engaging quizzes with ease.`}
+          url={'https://quiser.vercel.app/'}
+          code={'https://github.com/Haresz/quiser'}
+          tools={[
+            {
+              title: 'Next.js',
+              desc: 'A powerful React framework for server-side rendering and static site generation.',
+            },
+            {
+              title: 'Chakra UI',
+              desc: 'A modern React component library that provides a set of accessible and reusable components for building user interfaces.',
+            },
+            {
+              title: 'Tailwind CSS',
+              desc: 'A utility-first CSS framework that allows for rapidly building custom user interfaces.',
+            },
+            {
+              title: 'TypeScript',
+              desc: 'A typed superset of JavaScript that compiles to plain JavaScript, offering static type checking.',
+            },
+            {
+              title: 'React.js',
+              desc: 'A JavaScript library for building user interfaces, known for its component-based architecture.',
+            },
+            {
+              title: 'React Hooks',
+              desc: 'A feature in React that allows you to manage state and other React features without writing classes.',
+            },
+            {
+              title: 'Framer Motion',
+              desc: 'A library for creating animations and interactions in React applications.',
+            },
+            {
+              title: 'Phosphor Icons',
+              desc: 'A flexible icon family for interfaces, diagrams, and presentations.',
+            },
+            {
+              title: 'React Use Downloader',
+              desc: 'A React hook that provides a simple way to download files from the client side.',
+            },
+            {
+              title: 'ESLint',
+              desc: 'A tool for identifying and fixing linting errors in JavaScript code.',
+            },
+            {
+              title: 'TypeScript',
+              desc: 'Enhances code quality and development experience by adding static types to JavaScript.',
+            },
+            {
+              title: 'PostCSS',
+              desc: 'A tool for transforming CSS with JavaScript plugins, enabling various optimizations and enhancements.',
+            },
+            {
+              title: 'Autoprefixer',
+              desc: 'A PostCSS plugin that adds vendor prefixes to CSS rules, ensuring cross-browser compatibility.',
+            },
+          ]}
+          teams={[
+            {
+              title: 'Nizar Ali Rifa`i :',
+              desc: 'Collaborated as the UI/UX Designer, focusing on creating a user-centric design that enhances the overall user experience.',
+            },
+          ]}
+          image={'/project6.jpg'}
+        />
       </Box>
     </Box>
   );

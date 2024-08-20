@@ -117,7 +117,7 @@ export default function Project(props: {
               {teams ? (
                 <>
                   <Heading mt={4} as="h3" size="sm">
-                    Team Collaboration::
+                    Team Collaboration :
                   </Heading>
                   {teams.map(
                     (tool: { title: string; desc: string }, index: number) => {
