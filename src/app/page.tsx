@@ -2,7 +2,6 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import SectionAbout from "@/components/sestion/SectionAbout";
 import SectionExperience from "@/components/sestion/SectionExperience";
-import SectionHome from "@/components/sestion/SectionHome";
 import SectionProjects from "@/components/sestion/SectionProjects";
 import SectionSkill from "@/components/sestion/SectionSkill";
 import Head from "next/head";
@@ -14,16 +13,14 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <SectionHome />
-      <div className="section-divider" />
-      <SectionProjects />
+      {/* <SectionProjects />
       <div className="section-divider" style={{ background: '#1B3FE0' }} />
       <SectionExperience />
       <div className="section-divider" style={{ background: '#F5199B' }} />
       <SectionSkill />
       <div className="section-divider" style={{ background: '#0B0B2A' }} />
       <SectionAbout />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

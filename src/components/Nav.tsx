@@ -62,17 +62,21 @@ export default function Nav() {
       ref={navRef}
     >
       <Heading flex={1} as="h4" size="md" fontFamily={"var(--font-display)"} fontWeight={700}>
-        <span className="text-pink">Haris&rsquo;s </span>Portofolio
+        <Link href={"#project"}>
+          <span className="text-pink">Haris&rsquo;s </span> <span className="text-navy" >Portofolio</span>
+        </Link>
       </Heading>
 
-      <IconButton
-        className="md:hidden"
-        aria-label="Menu"
-        variant="ghost"
-        icon={isOpen ? <X size={28} /> : <List size={28} />}
-        onClick={isOpen ? onClose : onOpen}
-        zIndex={10000}
-      />
+      <div className="md:hidden">
+        <IconButton
+          aria-label="Menu"
+          variant="ghost"
+          icon={isOpen ? <X size={28} /> : <List size={28} />}
+          onClick={isOpen ? onClose : onOpen}
+          zIndex={10000}
+        />
+      </div>
+
 
       <Box flex={1} className="hidden md:inline-block">
         <Stack
@@ -81,28 +85,29 @@ export default function Nav() {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Link href={"#home"}> Home </Link>
           <Link href={"#project"}> Project </Link>
           <Link href={"#experience"}> Experience </Link>
           <Link href={"#skill"}> Skill </Link>
           <Link href={"#about"}> About Me </Link>
           <Link href={"#contact"}>
             <Button
-              bg={"#F5199B"}
-              color={"white"}
+              className="btn-box-shadow"
+              width={'fit-content'}
+              mt={0}
               px={6}
-              borderRadius={"50px"}
+              bg={'#F5199B'}
+              color={'white'}
+              borderRadius={'50px'}
               size="md"
-              className="btn-riso"
               style={{
-                transition: "all 0.2s ease-out",
+                transition: 'all 0.2s ease-out',
               }}
               _hover={{
-                bg: "white",
-                color: "#F5199B",
-                border: "2px solid #F5199B",
-                transition: "all 0.5s ease-out",
-                boxShadow: "none",
+                bg: 'white',
+                color: '#1B3FE0',
+                border: '1px solid #1B3FE0',
+                transition: 'all 0.5s ease-out',
+                boxShadow: '0 0',
               }}
             >
               Contact me!
@@ -120,9 +125,6 @@ export default function Nav() {
           </DrawerHeader>
           <DrawerBody>
             <Stack spacing={6} mt={8}>
-              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"#home"}>
-                Home
-              </Link>
               <Link onClick={handleNavClick} className="drawer-link text-navy" href={"#project"}>
                 Project
               </Link>
