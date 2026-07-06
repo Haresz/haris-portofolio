@@ -10,15 +10,15 @@ export default function ExperienceContent(props: any) {
         fontSize={{ base: "md", md: "lg" }}
       >
         <div>
-          <Text>{props.company}</Text>
-          <Text textColor={"primary"}>{props.position}</Text>
+          <Text color={"white"}>{props.company}</Text>
+          <Text color={"pink"}>{props.position}</Text>
         </div>
         <div className="md:text-end md:flex-col flex md:mt-0 -mt-2">
-          <Text className="md:mr-0 mr-4">{props.city}</Text>
-          <Text textColor={{ md: "primary" }}>{props.date}</Text>
+          <Text className="md:mr-0 mr-4" color={"white"}>{props.city}</Text>
+          <Text color={"blue"}>{props.date}</Text>
         </div>
       </Stack>
-      <UnorderedList className="mt-4" fontSize={{ base: "md", md: "lg" }}>
+      <UnorderedList className="mt-4" color={"white"} fontSize={{ base: "md", md: "lg" }}>
         {props.desc.map((desc: any) => {
           return <ListItem key={desc}>{desc}</ListItem>;
         })}

@@ -32,39 +32,43 @@ export default function Project(props: {
   const { title, description, url, code, tools, teams, image } = props;
 
   return (
-    <div className="container-project md:w-auto w-full">
+    <div className="container-project md:w-auto w-full misregister">
       <Image
-        className="md:w-[600px] w-full md:h-[300px] h-[200px] shadow-lg rounded-sm"
+        className="md:w-[600px] w-full md:h-[300px] h-[200px] shadow-lg torn-card"
         objectFit="cover"
         src={image}
       />
-      <Heading mt={4} as="h3" size="md">
+      <Heading mt={4} as="h3" size="md" color={"white"}>
         {title}
       </Heading>
       <Stack
-        className="text-primary underline text-lg mt-2"
+        className="underline text-lg mt-2"
         gap={4}
         justifyContent={'start'}
         direction={'row'}
       >
         <div className="flex">
-          <BookOpenText size={28} />
-          <Text onClick={onOpen} className="ml-1 cursor-pointer">
+          <BookOpenText size={28} color="#F5199B" />
+          <Text
+            onClick={onOpen}
+            className="ml-1 cursor-pointer"
+            color={"#F5199B"}
+          >
             study case
           </Text>
         </div>
         {url ? (
           <div className="flex">
-            <LinkBreak size={28} />
-            <Link className="ml-1" href={url}>
+            <LinkBreak size={28} color="#1B3FE0" />
+            <Link className="ml-1" href={url} style={{ color: '#1B3FE0' }}>
               visited
             </Link>
           </div>
         ) : null}
         {code ? (
           <div className="flex">
-            <Code size={28} />
-            <Link className="ml-1" href={code}>
+            <Code size={28} color="#1B3FE0" />
+            <Link className="ml-1" href={code} style={{ color: '#1B3FE0' }}>
               code
             </Link>
           </div>
@@ -77,12 +81,12 @@ export default function Project(props: {
         isCentered
       >
         <ModalOverlay />
-        <ModalContent maxH={500}>
-          <ModalHeader>{title}</ModalHeader>
+        <ModalContent maxH={500} bg={"#0B0B2A"} color={"white"}>
+          <ModalHeader fontFamily={"var(--font-display)"} fontWeight={700}>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box>
-              <Heading mt={4} as="h3" size="sm">
+              <Heading mt={4} as="h3" size="sm" color={"#F5199B"}>
                 Project Description:
               </Heading>
               <Text mt={2}> {description}</Text>
@@ -90,7 +94,7 @@ export default function Project(props: {
             <Box>
               {tools ? (
                 <>
-                  <Heading mt={4} as="h3" size="sm">
+                  <Heading mt={4} as="h3" size="sm" color={"#F5199B"}>
                     Technologies Used:
                   </Heading>
                   {tools.map(
@@ -102,6 +106,7 @@ export default function Project(props: {
                             display={'inline'}
                             as="h3"
                             size="sm"
+                            color={"#1B3FE0"}
                           >
                             {tool.title}
                           </Heading>
@@ -116,7 +121,7 @@ export default function Project(props: {
             <Box>
               {teams ? (
                 <>
-                  <Heading mt={4} as="h3" size="sm">
+                  <Heading mt={4} as="h3" size="sm" color={"#F5199B"}>
                     Team Collaboration :
                   </Heading>
                   {teams.map(
@@ -128,6 +133,7 @@ export default function Project(props: {
                             display={'inline'}
                             as="h3"
                             size="sm"
+                            color={"#1B3FE0"}
                           >
                             {tool.title}
                           </Heading>
@@ -140,23 +146,23 @@ export default function Project(props: {
               ) : null}
             </Box>
             <Stack
-              className="text-primary underline text-lg mt-2"
+              className="underline text-lg mt-2"
               gap={4}
               justifyContent={'start'}
               direction={'row'}
             >
               {url ? (
                 <div className="flex">
-                  <LinkBreak size={28} />
-                  <Link className="ml-1" href={url}>
+                  <LinkBreak size={28} color="#1B3FE0" />
+                  <Link className="ml-1" href={url} style={{ color: '#1B3FE0' }}>
                     visited
                   </Link>
                 </div>
               ) : null}
               {code ? (
                 <div className="flex">
-                  <Code size={28} />
-                  <Link className="ml-1" href={code}>
+                  <Code size={28} color="#1B3FE0" />
+                  <Link className="ml-1" href={code} style={{ color: '#1B3FE0' }}>
                     code
                   </Link>
                 </div>
@@ -166,14 +172,14 @@ export default function Project(props: {
 
           <ModalFooter>
             <Button
-              bg={'rgb(255 181 52)'}
-              color={'white'}
+              bg={"#F5199B"}
+              color={"white"}
               px={8}
               _hover={{
-                bg: 'white',
-                color: 'rgb(255 181 52)',
-                border: '1px solid rgb(255 181 52)',
-                transition: 'all 0.5s ease-out',
+                bg: "white",
+                color: "#F5199B",
+                border: "2px solid #F5199B",
+                transition: "all 0.5s ease-out",
               }}
               onClick={onClose}
             >

@@ -11,9 +11,12 @@ export default function Title(props: any) {
       textAlign={"center"}
       as="h2"
       size="2xl"
+      fontFamily={"var(--font-display)"}
+      fontWeight={700}
+      color={"white"}
     >
       {props.content}
-      <hr className="h-8 -mt-6 -mx-4 bg-primary" />
+      <hr className="h-8 -mt-6 -mx-4 bg-pink" />
     </Heading>
   );
 }

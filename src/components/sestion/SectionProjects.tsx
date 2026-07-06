@@ -2,11 +2,10 @@ import { Box } from '@chakra-ui/react';
 import React from 'react';
 import Project from '../Project';
 import Title from '../Title';
-import { title } from 'process';
 
 export default function SectionProjects() {
   return (
-    <Box id="project" px={{ base: 8, md: 20 }}>
+    <Box id="project" px={{ base: 8, md: 20 }} bg={"#0B0B2A"}>
       <Title content="Project" />
       <Box className="flex justify-between flex-wrap gap-y-10">
         <Project
@@ -179,7 +178,7 @@ export default function SectionProjects() {
         <Project
           title={'Resthere'}
           description={`RestHere: Your Ideal Place to Rest
-RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a “stay for everyone” philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.`}
+RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a "stay for everyone" philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.`}
           url={'https://jcwdol130205.purwadhikabootcamp.com/'}
           code={'https://github.com/fabianindra/finalproject'}
           tools={[
@@ -221,7 +220,7 @@ RestHere is a user-friendly platform for booking hotels, villas, and homestays. 
             },
             {
               title: 'TypeScript',
-              desc: 'A superset of JavaScript that adds static typing, allowing developers to catch errors early during development and enhance code quality.',
+              desc: 'A typed superset of JavaScript that compiles to plain JavaScript, offering static type checking.',
             },
             {
               title: 'Chakra UI',
