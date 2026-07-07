@@ -14,13 +14,13 @@ export default function Home() {
       </Head>
       <Nav />
       <SectionProjects />
-      {/* <div className="section-divider" style={{ background: '#1B3FE0' }} />
+      <div className="section-divider" style={{ background: '#1B3FE0' }} />
       <SectionExperience />
       <div className="section-divider" style={{ background: '#F5199B' }} />
       <SectionSkill />
       <div className="section-divider" style={{ background: '#0B0B2A' }} />
       <SectionAbout />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

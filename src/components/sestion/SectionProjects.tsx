@@ -16,11 +16,13 @@ export default function SectionProjects() {
         direction={{ base: 'column', md: 'row' }}
         alignItems={{ base: 'start', md: 'center' }}
         justifyContent={{ base: 'center', md: 'space-between' }}
+        mt={{ base: 16, md: 16 }}
         px={{ base: 8, md: 20 }}
-        py={{ base: 12, md: 16 }}
+        py={{ base: 8, md: 10 }}
         bg={'#F5199B'}
-        className="halftone"
+        className="sticky top-[72px]"
         spacing={{ base: 6, md: 0 }}
+        zIndex={9999}
       >
         <Stack flex={1}>
           <Heading
@@ -40,22 +42,24 @@ export default function SectionProjects() {
             fontWeight={700}
             letterSpacing={-1}
           >
-            Frontend Developer
+            Sofware Engineer
           </Heading>
           <Button
-            className="btn-riso"
+            className="btn-box-shadow"
             width={'fit-content'}
-            mt={2}
-            px={5}
+            mt={0}
+            px={6}
             bg={'#0B0B2A'}
             color={'white'}
             borderRadius={'50px'}
-            size="sm"
-            style={{ transition: 'all 0.2s ease-out' }}
+            size="md"
+            style={{
+              transition: 'all 0.2s ease-out',
+            }}
             _hover={{
               bg: 'white',
               color: '#0B0B2A',
-              border: '2px solid #0B0B2A',
+              border: '1px solid #0B0B2A',
               transition: 'all 0.5s ease-out',
               boxShadow: '0 0',
             }}
@@ -64,7 +68,7 @@ export default function SectionProjects() {
             Download CV
           </Button>
         </Stack>
-        <Box position="relative" flexShrink={0}>
+        <Box className="md:inline-block hidden " position="relative" flexShrink={0}>
           <Box
             position="absolute"
             inset={0}
@@ -83,7 +87,6 @@ export default function SectionProjects() {
           />
         </Box>
       </Stack>
-      <div className="section-divider" />
       <Box px={{ base: 8, md: 20 }} bg={"#0B0B2A"}>
         <Title content="Project" />
         <Box className="flex justify-between flex-wrap gap-y-10">

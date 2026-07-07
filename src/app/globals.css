@@ -4,29 +4,6 @@
 
 /* ===== RISO PRINT EFFECTS ===== */
 
-/* Halftone dot pattern */
-.halftone {
-  position: relative;
-}
-
-.halftone::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 3px 3px;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-}
-
-.halftone-lg::after {
-  background-size: 6px 6px;
-}
-
-.halftone-sm::after {
-  background-size: 2px 2px;
-}
-
 /* Grain/noise texture overlay */
 .grain {
   position: relative;
