@@ -6,7 +6,7 @@ export default function Title(props: any) {
     <Heading
       className="mx-auto"
       width={"fit-content"}
-      my={20}
+      my={14}
       letterSpacing={8}
       textAlign={"center"}
       as="h2"
