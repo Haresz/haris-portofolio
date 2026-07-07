@@ -18,30 +18,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Nav() {
-  const [pageY, setPageY] = useState(0);
-  const navRef: any = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  useEffect(() => {
-    let prevScrollPos = pageY;
-
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setPageY(currentScrollPos);
-      if (prevScrollPos > currentScrollPos) {
-        navRef.current.style.top = "0px";
-      } else {
-        navRef.current.style.top = "-100px";
-      }
-      prevScrollPos = currentScrollPos;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [pageY]);
 
   const handleNavClick = () => {
     onClose();
@@ -54,12 +31,11 @@ export default function Nav() {
       justifyContent={"space-between"}
       alignItems={"center"}
       px={{ base: 8, md: 20 }}
-      py={8}
+      py={4}
       backgroundColor={"white"}
       boxShadow="md"
       className="container-nav grain"
       zIndex={9999}
-      ref={navRef}
     >
       <Heading flex={1} as="h4" size="md" fontFamily={"var(--font-display)"} fontWeight={700}>
         <Link href={"#project"}>

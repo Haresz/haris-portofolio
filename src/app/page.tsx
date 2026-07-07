@@ -13,8 +13,8 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      {/* <SectionProjects />
-      <div className="section-divider" style={{ background: '#1B3FE0' }} />
+      <SectionProjects />
+      {/* <div className="section-divider" style={{ background: '#1B3FE0' }} />
       <SectionExperience />
       <div className="section-divider" style={{ background: '#F5199B' }} />
       <SectionSkill />
