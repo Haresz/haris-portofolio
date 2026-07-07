@@ -182,3 +182,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ===== NEOBRUTALISM PROJECT CARD ===== */
+
+.container-project {
+  background: #ffffff;
+  border: 3px solid #0b0b2a;
+  border-radius: 0;
+  box-shadow: 6px 6px 0px 0px #1b3fe0;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+}
+
+.container-project:hover {
+  box-shadow: 2px 2px 0px 0px #1b3fe0;
+  transform: translate(4px, 4px);
+}

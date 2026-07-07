@@ -32,49 +32,51 @@ export default function Project(props: {
   const { title, description, url, code, tools, teams, image } = props;
 
   return (
-    <div className="container-project md:w-auto w-full misregister">
+    <div className="container-project max-w-96 md:w-auto w-full ">
       <Image
-        className="md:w-[600px] w-full md:h-[300px] h-[200px] shadow-lg torn-card"
+        className="md:w-[600px] w-full aspect-video"
         objectFit="cover"
         src={image}
       />
-      <Heading mt={4} as="h3" size="md" color={"white"}>
-        {title}
-      </Heading>
-      <Stack
-        className="underline text-lg mt-2"
-        gap={4}
-        justifyContent={'start'}
-        direction={'row'}
-      >
-        <div className="flex">
-          <BookOpenText size={28} color="#F5199B" />
-          <Text
-            onClick={onOpen}
-            className="ml-1 cursor-pointer"
-            color={"#F5199B"}
-          >
-            study case
-          </Text>
-        </div>
-        {url ? (
+      <div className="p-4">
+        <Heading mt={4} as="h3" size="md" color={"#0B0B2A"}>
+          {title}
+        </Heading>
+        <Stack
+          className="underline text-lg mt-2"
+          gap={4}
+          justifyContent={'start'}
+          direction={'row'}
+        >
           <div className="flex">
-            <LinkBreak size={28} color="#1B3FE0" />
-            <Link className="ml-1" href={url} style={{ color: '#1B3FE0' }}>
-              visited
-            </Link>
+            <BookOpenText size={28} color="#F5199B" />
+            <Text
+              onClick={onOpen}
+              className="ml-1 cursor-pointer"
+              color={"#F5199B"}
+            >
+              study case
+            </Text>
           </div>
-        ) : null}
-        {code ? (
-          <div className="flex">
-            <Code size={28} color="#1B3FE0" />
-            <Link className="ml-1" href={code} style={{ color: '#1B3FE0' }}>
-              code
-            </Link>
-          </div>
-        ) : null}
-      </Stack>
-      <Modal
+          {url ? (
+            <div className="flex">
+              <LinkBreak size={28} color="#1B3FE0" />
+              <Link className="ml-1" href={url} style={{ color: '#1B3FE0' }}>
+                visited
+              </Link>
+            </div>
+          ) : null}
+          {code ? (
+            <div className="flex">
+              <Code size={28} color="#1B3FE0" />
+              <Link className="ml-1" href={code} style={{ color: '#1B3FE0' }}>
+                code
+              </Link>
+            </div>
+          ) : null}
+        </Stack>
+      </div>
+      {/* <Modal
         scrollBehavior="inside"
         isOpen={isOpen}
         onClose={onClose}
@@ -187,7 +189,7 @@ export default function Project(props: {
             </Button>
           </ModalFooter>
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

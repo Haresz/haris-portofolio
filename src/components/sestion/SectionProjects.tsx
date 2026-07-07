@@ -22,7 +22,7 @@ export default function SectionProjects() {
         bg={'#F5199B'}
         className="sticky top-[72px]"
         spacing={{ base: 6, md: 0 }}
-        zIndex={9999}
+        zIndex={80}
       >
         <Stack flex={1}>
           <Heading
@@ -89,7 +89,7 @@ export default function SectionProjects() {
       </Stack>
       <Box px={{ base: 8, md: 20 }} bg={"#0B0B2A"}>
         <Title content="Project" />
-        <Box className="flex justify-between flex-wrap gap-y-10">
+        <Box className="flex justify-between flex-wrap gap-y-10 mt-4">
           <Project
             title={'Company Profile PT Chakra Radha Mustika'}
             description={`The "Company Profile PT Chakra Radha Mustika" project is a comprehensive digital representation of PT Chakra Radha Mustika, designed to showcase the company's services, achievements, and values. This project utilizes modern web development technologies to ensure a seamless and engaging user experience.`}
