@@ -121,7 +121,7 @@ export default function SectionProjects() {
             ]}
             image={'/project1.jpg'}
           />
-          <Project
+          {/* <Project
             title={'XYZ Company Profile'}
             description={
               "This project is a company profile for XYZ Company. The web application provides information about the company's history, team, services, and contact details. It is built using the latest web technologies to ensure a smooth and engaging user experience."
@@ -452,7 +452,7 @@ Quiser is an intuitive platform designed to create and manage quizzes effortless
               },
             ]}
             image={'/project6.jpg'}
-          />
+          /> */}
         </Box>
       </Box>
     </Box>

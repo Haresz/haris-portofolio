@@ -35,7 +35,7 @@ export default function Nav() {
       backgroundColor={"white"}
       boxShadow="md"
       className="container-nav grain"
-      zIndex={9999}
+      zIndex={80}
     >
       <Heading flex={1} as="h4" size="md" fontFamily={"var(--font-display)"} fontWeight={700}>
         <Link href={"#project"}>
