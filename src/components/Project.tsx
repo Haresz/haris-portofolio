@@ -11,8 +11,9 @@ import {
   useDisclosure,
   Text,
   Image,
+  Button,
 } from '@chakra-ui/react';
-import { LinkBreak, Code } from '@phosphor-icons/react/dist/ssr';
+import { LinkBreak, Code, Eye } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 import React from 'react';
 
@@ -40,7 +41,7 @@ export default function Project(props: {
           src={image}
         />
         <div className=" border-t-4 border-blue py-2 px-4">
-          <Heading mt={4} as="h3" size="md" color={"#0B0B2A"}>
+          <Heading mt={4} as="h3" size="md" fontFamily="var(--font-display)" color={"#0B0B2A"}>
             {title}
           </Heading>
           <i className="text-black">sort desc</i>
@@ -55,14 +56,18 @@ export default function Project(props: {
         motionPreset="scale"
       >
         <ModalOverlay
-          bg="rgba(11, 11, 42, 0.25)"
+          bg="rgba(27, 63, 224, 0.55)"
           sx={{ backdropFilter: 'blur(8px)' }}
         />
         <ModalContent
-          bg="white"
-          borderRadius={8}
+          className="modal-card"
           mx={4}
           maxH="85vh"
+          boxShadow="6px 6px 0 0 #0B0B2A"
+          border="3px solid #0B0B2A"
+          borderRadius="4px"
+          bg="white"
+          position="relative"
         >
           <ModalCloseButton
             color="#0B0B2A"
@@ -71,34 +76,34 @@ export default function Project(props: {
             zIndex={1}
           />
           <ModalBody px={6} py={4}>
-            <Heading as="h3" size="lg" color="#0B0B2A" mb={4}>
+            <Heading as="h3" size="lg" color="#0B0B2A" mb={4} fontFamily="var(--font-display)" fontWeight={700}>
               {title}
             </Heading>
-            <Text color="#333" mb={6}>
+            <Text color="#333" mb={4}>
               {description}
             </Text>
             {tools ? (
-              <Box mb={6}>
+              <Box mb={4}>
                 <Heading as="h4" size="sm" color="#F5199B" mb={3}>
                   Technologies Used:
                 </Heading>
                 {tools.map(
                   (tool: { title: string; desc: string }, index: number) => {
-                    return (
-                      <Box key={index} mb={3}>
-                        <Text fontWeight="bold" color="#1B3FE0" display="inline">
-                          {tool.title}
-                        </Text>
-                        <Text color="#333" display="inline">
-                          {tool.desc}
-                        </Text>
-                      </Box>
-                    );
+                    if (index > 3) {
+                      return null;
+                    } else {
+                      return (
+                        <Button marginRight={2} rounded="3xl" key={index} size={{ base: "sm" }}>
+                          {tool.title.replace(/\s*:\s*$/, '')}
+                        </Button>
+                      );
+                    }
+
                   },
                 )}
               </Box>
             ) : null}
-            {teams ? (
+            {/* {teams ? (
               <Box mb={6}>
                 <Heading as="h4" size="sm" color="#F5199B" mb={3}>
                   Team Collaboration:
@@ -122,16 +127,18 @@ export default function Project(props: {
                   },
                 )}
               </Box>
-            ) : null}
+            ) : null} */}
             <Stack
               className="underline text-lg"
+              borderTop="2px solid #0B0B2A"
+              mt={4}
+              pt={4}
               gap={4}
-              justifyContent={'start'}
               direction={'row'}
             >
               {url ? (
                 <div className="flex items-center">
-                  <LinkBreak size={24} color="#1B3FE0" />
+                  <LinkBreak size={20} color="#1B3FE0" />
                   <Link
                     className="ml-1"
                     href={url}
@@ -145,7 +152,7 @@ export default function Project(props: {
               ) : null}
               {code ? (
                 <div className="flex items-center">
-                  <Code size={24} color="#1B3FE0" />
+                  <Code size={20} color="#1B3FE0" />
                   <Link
                     className="ml-1"
                     href={code}
@@ -157,6 +164,18 @@ export default function Project(props: {
                   </Link>
                 </div>
               ) : null}
+              <div className="flex items-center">
+                <Eye size={20} color="#1B3FE0" />
+                <Link
+                  className="ml-1"
+                  href={""}
+                  style={{ color: '#1B3FE0' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  detail
+                </Link>
+              </div>
             </Stack>
           </ModalBody>
         </ModalContent>

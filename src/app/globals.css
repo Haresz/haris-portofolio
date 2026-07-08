@@ -183,6 +183,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== MODAL CARD — RISO PRINT / NEOBRUTALISM ===== */
+
+.modal-card {
+  position: relative;
+}
+
+.modal-card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #FF0080;
+  border-radius: 4px;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* ===== NEOBRUTALISM PROJECT CARD ===== */
 
 .container-project {
