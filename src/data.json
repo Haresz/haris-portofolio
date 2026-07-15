@@ -1,9 +1,15 @@
 [
   {
     "title": "Company Profile PT Chakra Radha Mustika",
+    "slug": "chakra-radha-mustika",
+    "tagline": "A comprehensive digital presence for PT Chakra Radha Mustika",
     "description": "The \"Company Profile PT Chakra Radha Mustika\" project is a comprehensive digital representation of PT Chakra Radha Mustika, designed to showcase the company's services, achievements, and values. This project utilizes modern web development technologies to ensure a seamless and engaging user experience.",
+    "fullDescription": "TODO: Replace with a detailed project overview. Cover what problem the project solves, who the client/audience is, key features built, and your role in the project. Example structure: (1) Problem — the company needed a modern web presence to showcase their services. (2) Solution — a responsive, performant company profile built with Next.js featuring server-side rendering for SEO. (3) Role — your specific contributions (frontend development, component architecture, deployment). (4) Outcome — results or impact.",
     "url": "https://cakraradhamustika.com/",
     "code": null,
+    "screenshots": [
+      { "src": "/project1.jpg", "alt": "Homepage screenshot" }
+    ],
     "tools": [
       {
         "title": "React and Next.js:",
@@ -12,6 +18,13 @@
       {
         "title": "Tailwind CSS:",
         "desc": "For styling, Tailwind CSS is used to create a visually appealing and consistent design across the website. Tailwind's utility-first approach allows for rapid development and customization, ensuring the company profile looks professional and modern."
+      }
+    ],
+    "techBreakdown": null,
+    "challenges": [
+      {
+        "title": "TODO: Challenge title",
+        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
       }
     ],
     "teams": [
@@ -32,9 +45,15 @@
   },
   {
     "title": "XYZ Company Profile",
+    "slug": "xyz-company",
+    "tagline": "A modern company profile with smooth animations",
     "description": "This project is a company profile for XYZ Company. The web application provides information about the company's history, team, services, and contact details. It is built using the latest web technologies to ensure a smooth and engaging user experience.",
+    "fullDescription": "TODO: Replace with a detailed project overview. Cover what problem the project solves, who the client/audience is, key features built, and your role in the project. Example structure: (1) Problem — the company needed an updated digital profile. (2) Solution — a polished, animated company profile using Next.js and Framer Motion. (3) Role — your specific contributions. (4) Outcome — results or impact.",
     "url": "https://xyz-company-cyan.vercel.app/",
     "code": "https://github.com/Haresz/xyz-company",
+    "screenshots": [
+      { "src": "/project3.jpg", "alt": "Homepage screenshot" }
+    ],
     "tools": [
       {
         "title": "Next.js: ",
@@ -57,14 +76,27 @@
         "desc": " A library for creating smooth animations in React applications."
       }
     ],
+    "techBreakdown": null,
+    "challenges": [
+      {
+        "title": "TODO: Challenge title",
+        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+      }
+    ],
     "teams": null,
     "image": "/project3.jpg"
   },
   {
     "title": "The Blog",
+    "slug": "the-blog",
+    "tagline": "A full-featured blog platform with CRUD and pagination",
     "description": "Website Blog is a web application developed using Next.js framework, Chakra UI for styling, and Redux Toolkit for state management. It allows users to create, edit, and view blog posts. The application provides a user-friendly interface with features like pagination and responsive design.",
+    "fullDescription": "TODO: Replace with a detailed project overview. Cover what problem the project solves, who the audience is, key features built, and your role. Example: (1) Problem — need for a clean, performant blog platform. (2) Solution — full CRUD blog with auth, pagination, and rich text editing. (3) Role — your contributions to frontend and state management. (4) Outcome — results or impact.",
     "url": "https://website-blog-ashen.vercel.app/",
     "code": "https://github.com/Haresz/website-blog",
+    "screenshots": [
+      { "src": "/project2.jpg", "alt": "Homepage screenshot" }
+    ],
     "tools": [
       {
         "title": "Next.js: ",
@@ -103,14 +135,27 @@
         "desc": " A library for creating smooth animations in React applications."
       }
     ],
+    "techBreakdown": null,
+    "challenges": [
+      {
+        "title": "TODO: Challenge title",
+        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+      }
+    ],
     "teams": null,
     "image": "/project2.jpg"
   },
   {
     "title": "Event Management",
+    "slug": "event-management",
+    "tagline": "An MVP platform for creating, promoting, and attending events",
     "description": "The main goal of the MVP is to create a simple and functional event management platform that allows event organizers to create and promote events, while attendees can browse and register for those events.",
+    "fullDescription": "TODO: Replace with a detailed project overview. Cover the event management problem, the organizer vs attendee experience, key features (event creation, registration, search), and your role. Example: (1) Problem — event organizers lacked a simple platform to manage events. (2) Solution — MVP with event CRUD, registration flow, and attendee management. (3) Role — your fullstack contributions. (4) Outcome.",
     "url": null,
     "code": "https://github.com/Haresz/website-blog",
+    "screenshots": [
+      { "src": "/project4.jpg", "alt": "Homepage screenshot" }
+    ],
     "tools": [
       {
         "title": "Next.js: ",
@@ -157,14 +202,29 @@
         "desc": "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications."
       }
     ],
+    "techBreakdown": null,
+    "challenges": [
+      {
+        "title": "TODO: Challenge title",
+        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+      }
+    ],
     "teams": null,
     "image": "/project4.jpg"
   },
   {
     "title": "Resthere",
-    "description": "RestHere: Your Ideal Place to Rest\nRestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a \"stay for everyone\" philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.",
+    "slug": "resthere",
+    "tagline": "Your Ideal Place to Rest — a hotel booking platform",
+    "description": "RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a \"stay for everyone\" philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.",
+    "fullDescription": "TODO: Replace with a detailed project overview. Cover the \"stay for everyone\" philosophy, the problem of fragmented hotel/villa booking, key features (property search, booking flow, map integration, user auth), and your role as fullstack developer. Example: (1) Problem — travelers struggle to find and book accommodations across scattered platforms. (2) Solution — a unified booking platform with Leaflet maps, real-time availability, and Google OAuth. (3) Role — fullstack development with Agile methodology. (4) Outcome.",
     "url": "https://jcwdol130205.purwadhikabootcamp.com/",
     "code": "https://github.com/fabianindra/finalproject",
+    "screenshots": [
+      { "src": "/project5.png", "alt": "Homepage screenshot" },
+      { "src": "/project5.png", "alt": "Booking flow screenshot" },
+      { "src": "/project5.png", "alt": "Map view screenshot" }
+    ],
     "tools": [
       {
         "title": "Next.js",
@@ -279,6 +339,29 @@
         "desc": "An authentication middleware for Node.js that supports a variety of authentication strategies."
       }
     ],
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for SEO-friendly property listings and fast page loads across the booking flow." },
+      { "name": "Redux Thunk", "reason": "Managing async booking state — handling property searches, availability checks, and reservation API calls without blocking the UI." },
+      { "name": "Redux.js", "reason": "Centralized state management for user auth, cart/booking data, and filter preferences across the app." },
+      { "name": "Leaflet / Leaflet.js", "reason": "Interactive maps for browsing properties by location, letting users explore accommodations geographically." },
+      { "name": "Prisma ORM", "reason": "Type-safe database access for complex relational queries (properties, bookings, users, reviews)." },
+      { "name": "MySQL", "reason": "Relational database for structured booking data — properties, reservations, user accounts, and payment records." },
+      { "name": "Express.js", "reason": "RESTful API backend handling auth, booking logic, file uploads, and email notifications." },
+      { "name": "Google OAuth2", "reason": "Secure, one-click social login so users can sign up without creating yet another password." },
+      { "name": "Tailwind CSS", "reason": "Rapid UI development with utility classes, keeping the design clean and consistent across responsive breakpoints." },
+      { "name": "TypeScript", "reason": "Static typing to catch bugs early in a large codebase with complex data models and API contracts." },
+      { "name": "Agile Development", "reason": "Iterative two-week sprints with Jira tracking, enabling rapid feedback and course correction during the bootcamp project." }
+    ],
+    "challenges": [
+      {
+        "title": "Complex Booking State Management",
+        "description": "TODO: Describe how you managed the multi-step booking flow state (property selection → date picker → guest info → payment) across Redux with Thunk middleware."
+      },
+      {
+        "title": "Map Integration with Property Data",
+        "description": "TODO: Describe the challenge of syncing Leaflet map markers with filtered property results and handling map events (zoom, pan) alongside the list view."
+      }
+    ],
     "teams": [
       {
         "title": "Fabian Winandi:",
@@ -289,9 +372,16 @@
   },
   {
     "title": "Quiser",
-    "description": "Quiser: Simplifying Your Learning Journey\nQuiser is an intuitive platform designed to create and manage quizzes effortlessly. Aimed at enhancing the learning experience, it offers a clean and user-friendly interface that allows users to focus on the content. Whether for education, training, or fun, Quiser enables the creation of engaging quizzes with ease.",
+    "slug": "quiser",
+    "tagline": "Simplifying your learning journey with interactive quizzes",
+    "description": "Quiser: Simplifying Your Learning Journey. Quiser is an intuitive platform designed to create and manage quizzes effortlessly. Aimed at enhancing the learning experience, it offers a clean and user-friendly interface that allows users to focus on the content. Whether for education, training, or fun, Quiser enables the creation of engaging quizzes with ease.",
+    "fullDescription": "TODO: Replace with a detailed project overview. Cover the quiz platform concept, target audience (educators, trainers), key features (quiz creation, taking quizzes, scoring, analytics), and your role. Example: (1) Problem — creating and managing quizzes is tedious with existing tools. (2) Solution — an intuitive platform with real-time quiz taking, automatic grading, and performance tracking. (3) Role — frontend development with animations and responsive design. (4) Outcome.",
     "url": "https://quiser.vercel.app/",
     "code": "https://github.com/Haresz/quiser",
+    "screenshots": [
+      { "src": "/project6.jpg", "alt": "Homepage screenshot" },
+      { "src": "/project6.jpg", "alt": "Quiz creation interface screenshot" }
+    ],
     "tools": [
       {
         "title": "Next.js",
@@ -344,6 +434,25 @@
       {
         "title": "Autoprefixer",
         "desc": "A PostCSS plugin that adds vendor prefixes to CSS rules, ensuring cross-browser compatibility."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for quiz pages and static generation for landing pages, ensuring fast load times for learners." },
+      { "name": "Chakra UI", "reason": "Accessible, composable components for building the quiz interface quickly while maintaining consistency." },
+      { "name": "Tailwind CSS", "reason": "Utility-first styling for rapid prototyping of quiz layouts, score displays, and responsive grids." },
+      { "name": "Framer Motion", "reason": "Smooth transitions between quiz questions, progress animations, and interactive feedback on answers." },
+      { "name": "TypeScript", "reason": "Type safety for quiz data models (questions, options, scores) to prevent runtime errors during quiz-taking." },
+      { "name": "React Hooks", "reason": "Custom hooks for quiz state management — tracking current question, timer, score, and answer history." },
+      { "name": "Formik + Yup", "reason": "Robust form handling for quiz creation with schema-based validation ensuring all questions have valid options." }
+    ],
+    "challenges": [
+      {
+        "title": "Quiz State Transitions",
+        "description": "TODO: Describe how you managed real-time quiz state — timer countdown, answer selection, scoring logic, and transitions between questions without losing progress."
+      },
+      {
+        "title": "Smooth Animations Under Load",
+        "description": "TODO: Describe optimizing Framer Motion animations for quiz transitions while keeping the experience snappy on mobile devices."
       }
     ],
     "teams": [

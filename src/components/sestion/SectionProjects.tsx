@@ -97,6 +97,7 @@ export default function SectionProjects() {
             >
               <Project
                 title={project.title}
+                slug={project.slug}
                 description={project.description}
                 tools={project.tools}
                 url={project.url || ""}

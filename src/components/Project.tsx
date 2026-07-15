@@ -19,6 +19,7 @@ import React from 'react';
 
 export default function Project(props: {
   title: string;
+  slug: string;
   description: string;
   tools: any;
   teams: any | undefined;
@@ -27,7 +28,7 @@ export default function Project(props: {
   image: string;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { title, description, url, code, tools, teams, image } = props;
+  const { title, slug, description, url, code, tools, teams, image } = props;
 
   return (
     <>
@@ -168,10 +169,8 @@ export default function Project(props: {
                 <Eye size={20} color="#1B3FE0" />
                 <Link
                   className="ml-1"
-                  href={""}
+                  href={`/projects/${slug}`}
                   style={{ color: '#1B3FE0' }}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   detail
                 </Link>

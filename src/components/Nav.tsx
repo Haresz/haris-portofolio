@@ -38,7 +38,7 @@ export default function Nav() {
       zIndex={80}
     >
       <Heading flex={1} as="h4" size="md" fontFamily={"var(--font-display)"} fontWeight={700}>
-        <Link href={"#project"}>
+        <Link href={"/#project"}>
           <span className="text-pink">Haris&rsquo;s </span> <span className="text-navy" >Portofolio</span>
         </Link>
       </Heading>
@@ -61,11 +61,11 @@ export default function Nav() {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Link href={"#project"}> Project </Link>
-          <Link href={"#experience"}> Experience </Link>
-          <Link href={"#skill"}> Skill </Link>
-          <Link href={"#about"}> About Me </Link>
-          <Link href={"#contact"}>
+          <Link href={"/#project"}> Project </Link>
+          <Link href={"/#experience"}> Experience </Link>
+          <Link href={"/#skill"}> Skill </Link>
+          <Link href={"/#about"}> About Me </Link>
+          <Link href={"/#contact"}>
             <Button
               className="btn-box-shadow"
               width={'fit-content'}
@@ -101,19 +101,19 @@ export default function Nav() {
           </DrawerHeader>
           <DrawerBody>
             <Stack spacing={6} mt={8}>
-              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"#project"}>
+              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"/#project"}>
                 Project
               </Link>
-              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"#experience"}>
+              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"/#experience"}>
                 Experience
               </Link>
-              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"#skill"}>
+              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"/#skill"}>
                 Skill
               </Link>
-              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"#about"}>
+              <Link onClick={handleNavClick} className="drawer-link text-navy" href={"/#about"}>
                 About Me
               </Link>
-              <Link onClick={handleNavClick} href={"#contact"}>
+              <Link onClick={handleNavClick} href={"/#contact"}>
                 <Button
                   bg={"#F5199B"}
                   color={"white"}
