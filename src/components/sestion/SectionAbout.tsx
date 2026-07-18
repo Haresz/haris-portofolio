@@ -16,9 +16,9 @@ export default function SectionAbout() {
       >
         <Box flex={1}>
           <Text fontSize={{ base: 'md', md: 'lg' }} color={"white"} mb={8}>
-            I'm a Software Developer with a frontend foundation, currently
+            I am a Software Developer with a frontend foundation, currently
             expanding into backend development and data-driven systems. I enjoy
-            building things end-to-end and I'm always looking for the next
+            building things end-to-end and I am always looking for the next
             system worth understanding from the inside out.
           </Text>
           <Heading as="h3" size="lg" color={"#F5199B"} mb={6} fontFamily={"var(--font-display)"} fontWeight={700}>
