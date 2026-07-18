@@ -1,187 +1,185 @@
 'use client';
 import {
   Box,
-  Button,
   Heading,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
-  ModalHeader,
   ModalOverlay,
   Stack,
   useDisclosure,
   Text,
   Image,
+  Button,
 } from '@chakra-ui/react';
-import { BookOpenText, LinkBreak, Code } from '@phosphor-icons/react/dist/ssr';
+import { LinkBreak, Code, Eye } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 import React from 'react';
 
 export default function Project(props: {
   title: string;
+  slug: string;
   description: string;
   tools: any;
   teams: any | undefined;
   url: string | undefined;
   code: string | undefined;
   image: string;
+  tagline: string;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { title, description, url, code, tools, teams, image } = props;
+  const { title, slug, description, url, code, tools, teams, image, tagline } = props;
 
   return (
-    <div className="container-project md:w-auto w-full">
-      <Image
-        className="md:w-[600px] w-full md:h-[300px] h-[200px] shadow-lg rounded-sm"
-        objectFit="cover"
-        src={image}
-      />
-      <Heading mt={4} as="h3" size="md">
-        {title}
-      </Heading>
-      <Stack
-        className="text-primary underline text-lg mt-2"
-        gap={4}
-        justifyContent={'start'}
-        direction={'row'}
+    <>
+      <div
+        className="container-project max-w-96 md:w-auto w-full cursor-pointer"
+        onClick={onOpen}
       >
-        <div className="flex">
-          <BookOpenText size={28} />
-          <Text onClick={onOpen} className="ml-1 cursor-pointer">
-            study case
-          </Text>
+        <Image
+          className="md:w-[600px] w-full aspect-video"
+          objectFit="cover"
+          src={image}
+        />
+        <div className=" border-t-4 border-blue py-2 px-4">
+          <Heading mt={4} as="h3" size="md" fontFamily="var(--font-display)" color={"#0B0B2A"}>
+            {title}
+          </Heading>
+          <i className="text-black line-clamp-1">{tagline}</i>
         </div>
-        {url ? (
-          <div className="flex">
-            <LinkBreak size={28} />
-            <Link className="ml-1" href={url}>
-              visited
-            </Link>
-          </div>
-        ) : null}
-        {code ? (
-          <div className="flex">
-            <Code size={28} />
-            <Link className="ml-1" href={code}>
-              code
-            </Link>
-          </div>
-        ) : null}
-      </Stack>
+      </div>
+
       <Modal
-        scrollBehavior="inside"
         isOpen={isOpen}
         onClose={onClose}
         isCentered
+        scrollBehavior="inside"
+        motionPreset="scale"
       >
-        <ModalOverlay />
-        <ModalContent maxH={500}>
-          <ModalHeader>{title}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Box>
-              <Heading mt={4} as="h3" size="sm">
-                Project Description:
-              </Heading>
-              <Text mt={2}> {description}</Text>
-            </Box>
-            <Box>
-              {tools ? (
-                <>
-                  <Heading mt={4} as="h3" size="sm">
-                    Technologies Used:
-                  </Heading>
-                  {tools.map(
-                    (tool: { title: string; desc: string }, index: number) => {
+        <ModalOverlay
+          bg="rgba(27, 63, 224, 0.55)"
+          sx={{ backdropFilter: 'blur(8px)' }}
+        />
+        <ModalContent
+          className="modal-card"
+          mx={4}
+          maxH="85vh"
+          boxShadow="6px 6px 0 0 #0B0B2A"
+          border="3px solid #0B0B2A"
+          borderRadius="4px"
+          bg="white"
+          position="relative"
+        >
+          <ModalCloseButton
+            color="#0B0B2A"
+            _hover={{ bg: '#F5199B', color: 'white' }}
+            size="lg"
+            zIndex={1}
+          />
+          <ModalBody px={6} py={4}>
+            <Heading as="h3" size="lg" color="#0B0B2A" mb={4} fontFamily="var(--font-display)" fontWeight={700}>
+              {title}
+            </Heading>
+            <Text color="#333" mb={4}>
+              {description}
+            </Text>
+            {tools ? (
+              <Box mb={4}>
+                <Heading as="h4" size="sm" color="#F5199B" mb={3}>
+                  Technologies Used:
+                </Heading>
+                {tools.map(
+                  (tool: { title: string; desc: string }, index: number) => {
+                    if (index > 3) {
+                      return null;
+                    } else {
                       return (
-                        <Box key={index} mt={4}>
-                          <Heading
-                            fontWeight={'medium'}
-                            display={'inline'}
-                            as="h3"
-                            size="sm"
-                          >
-                            {tool.title}
-                          </Heading>
-                          <Text display={'inline'}>{tool.desc}</Text>
-                        </Box>
+                        <Button marginRight={2} rounded="3xl" key={index} size={{ base: "sm" }}>
+                          {tool.title.replace(/\s*:\s*$/, '')}
+                        </Button>
                       );
-                    },
-                  )}
-                </>
-              ) : null}
-            </Box>
-            <Box>
-              {teams ? (
-                <>
-                  <Heading mt={4} as="h3" size="sm">
-                    Team Collaboration :
-                  </Heading>
-                  {teams.map(
-                    (tool: { title: string; desc: string }, index: number) => {
-                      return (
-                        <Box key={index} mt={4}>
-                          <Heading
-                            fontWeight={'medium'}
-                            display={'inline'}
-                            as="h3"
-                            size="sm"
-                          >
-                            {tool.title}
-                          </Heading>
-                          <Text display={'inline'}>{tool.desc}</Text>
-                        </Box>
-                      );
-                    },
-                  )}
-                </>
-              ) : null}
-            </Box>
+                    }
+
+                  },
+                )}
+              </Box>
+            ) : null}
+            {/* {teams ? (
+              <Box mb={6}>
+                <Heading as="h4" size="sm" color="#F5199B" mb={3}>
+                  Team Collaboration:
+                </Heading>
+                {teams.map(
+                  (member: { title: string; desc: string }, index: number) => {
+                    return (
+                      <Box key={index} mb={3}>
+                        <Text
+                          fontWeight="bold"
+                          color="#1B3FE0"
+                          display="inline"
+                        >
+                          {member.title}
+                        </Text>
+                        <Text color="#333" display="inline">
+                          {member.desc}
+                        </Text>
+                      </Box>
+                    );
+                  },
+                )}
+              </Box>
+            ) : null} */}
             <Stack
-              className="text-primary underline text-lg mt-2"
+              className="underline text-lg"
+              borderTop="2px solid #0B0B2A"
+              mt={4}
+              pt={4}
               gap={4}
-              justifyContent={'start'}
               direction={'row'}
             >
               {url ? (
-                <div className="flex">
-                  <LinkBreak size={28} />
-                  <Link className="ml-1" href={url}>
+                <div className="flex items-center">
+                  <LinkBreak size={20} color="#1B3FE0" />
+                  <Link
+                    className="ml-1"
+                    href={url}
+                    style={{ color: '#1B3FE0' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     visited
                   </Link>
                 </div>
               ) : null}
               {code ? (
-                <div className="flex">
-                  <Code size={28} />
-                  <Link className="ml-1" href={code}>
+                <div className="flex items-center">
+                  <Code size={20} color="#1B3FE0" />
+                  <Link
+                    className="ml-1"
+                    href={code}
+                    style={{ color: '#1B3FE0' }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     code
                   </Link>
                 </div>
               ) : null}
+              <div className="flex items-center">
+                <Eye size={20} color="#1B3FE0" />
+                <Link
+                  className="ml-1"
+                  href={`/projects/${slug}`}
+                  style={{ color: '#1B3FE0' }}
+                >
+                  detail
+                </Link>
+              </div>
             </Stack>
           </ModalBody>
-
-          <ModalFooter>
-            <Button
-              bg={'rgb(255 181 52)'}
-              color={'white'}
-              px={8}
-              _hover={{
-                bg: 'white',
-                color: 'rgb(255 181 52)',
-                border: '1px solid rgb(255 181 52)',
-                transition: 'all 0.5s ease-out',
-              }}
-              onClick={onClose}
-            >
-              Close
-            </Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
-    </div>
+    </>
   );
 }

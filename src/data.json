@@ -1,0 +1,589 @@
+[
+ {
+    "title": "Personal Finance Tracker",
+    "slug": "personal-finance-tracker",
+    "tagline": "A comprehensive financial management application",
+    "description": "A modern, full-stack React application for tracking personal finances with a clean, intuitive interface. Built with React, Vite, and Tailwind CSS, this app helps you manage your income and expenses efficiently with real-time data synchronization using Google Sheets as the backend.",
+    "fullDescription": "Problem: Tracking personal cashflow and habits often requires complex software or manual entry that is hard to maintain on a daily basis.\n\nSolution: Developed a custom ledger application that seamlessly integrates a web frontend with Google Sheets. The backend logic utilizes Google Apps Script (GAS) with custom doGet and doPost functions, including reliable UUID generation for transaction tracking. The UI is designed with a minimalist, 3D flat aesthetic to keep the user experience focused and clean.\n\nRole: Sole developer handling both the frontend interface and the GAS backend integration.\n\nOutcome: A fast, responsive tracking tool that centralizes financial data directly into personal spreadsheets without relying on third-party databases.",
+    "url": null,
+    "code": null,
+    "screenshots": [
+      { "src": "/finance-tracker.png", "alt": "Dashboard screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "React.js",
+        "desc": "A JavaScript library for building the interactive user interface."
+      },
+      {
+        "title": "Vite",
+        "desc": "Next-generation frontend tooling utilized for fast, optimized builds."
+      },
+      {
+        "title": "Tailwind CSS",
+        "desc": "A utility-first CSS framework applied to create a clean, modern, and responsive design system rapidly."
+      },
+      {
+        "title": "Google Sheets API",
+        "desc": "Serves as the accessible, real-time database for the application."
+      },
+      {
+        "title": "Google Apps Script (GAS)",
+        "desc": "Handles the server-side logic, processing API requests (doGet/doPost), and data formatting."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "React + Vite", "reason": "Provides a snappy, highly responsive frontend experience critical for daily habit and finance tracking." },
+      { "name": "Google Sheets & GAS", "reason": "Offers a zero-cost, easily accessible backend solution where data remains entirely in the user's control." }
+    ],
+    "challenges": [
+      {
+        "title": "Reliable Data Syncing with GAS",
+        "description": "Ensuring smooth data transmission between the React frontend and Google Apps Script endpoints required careful handling of CORS and JSON payloads via doPost."
+      }
+    ],
+    "teams": null,
+    "image": "/finance-tracker.png"
+  },
+  {
+    "title": "Planify AI – Modern Landing Page",
+    "slug": "planify-ai-landing-page",
+    "tagline": "A sleek, high-conversion landing page",
+    "description": "A sleek, high-conversion landing page designed for Planify AI, an upcoming AI-powered productivity and planning application. This repository focuses strictly on frontend excellence, demonstrating how to build a compelling first impression for a digital product through modern web design principles.",
+    "fullDescription": "Problem: New digital products require a strong, compelling visual presence to capture user interest and drive early conversions.\n\nSolution: Engineered a sleek landing page tailored for an AI productivity app. The focus was entirely on frontend execution, ensuring that animations, typography, and layout work cohesively to deliver a premium feel.\n\nRole: Frontend Developer responsible for translating design concepts into a high-performance web page.",
+    "url": "https://planify-ai.vercel.app",
+    "code": null,
+    "screenshots": [
+      { "src": "/planify-ai.png", "alt": "Landing page hero section screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "React.js",
+        "desc": "Employed to build the modular components of the landing page."
+      },
+      {
+        "title": "JavaScript",
+        "desc": "Provides the core logic and interactivity for the UI elements."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "React.js", "reason": "Component-based architecture allowed for rapid development of reusable UI sections like Hero, Features, and CTA." }
+    ],
+    "challenges": [
+      {
+        "title": "Optimizing Performance with High-Quality Assets",
+        "description": "Balancing high-quality visual assets and animations with fast load times was challenging. Solved by implementing lazy loading for images and optimizing React component rendering to maintain a 90+ Lighthouse performance score."
+      },
+      {
+        "title": "Responsive Layout Shifts",
+        "description": "Complex grid layouts and absolute positioning for background elements caused layout shifts on specific mobile viewports. Addressed this by strictly using Tailwind's responsive prefixes and testing across multiple device sizes to ensure a fluid experience."
+      }
+    ],
+    "teams": null,
+    "image": "/planify-ai.png"
+  },
+  {
+    "title": "Go Cashflow REST API",
+    "slug": "go-cashflow-rest-api",
+    "tagline": "A robust backend service for financial tracking",
+    "description": "A RESTful API built entirely with Go (Golang) designed to handle financial data operations, specifically focusing on managing and tracking cashflow efficiently.",
+    "fullDescription": "This project represents a deep dive into backend development utilizing Go. It provides the core API infrastructure necessary for a cashflow tracking application, handling routing, data validation, and database interactions with high performance.",
+    "url": "https://go-cashflow-rest-api.vercel.app",
+    "code": "https://github.com/Haresz/go-cashflow-rest-api",
+    "screenshots": [
+      { "src": "/go-cashflow-api.jpg", "alt": "API Architecture and Postman testing screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Go (Golang)",
+        "desc": "The statically typed, compiled programming language used to build the high-performance API."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Go (Golang)", "reason": "Selected for its simplicity, fast execution speed, and excellent standard library for building REST APIs." }
+    ],
+    "challenges": [
+      {
+        "title": "Structuring Go Application for Scalability",
+        "description": "Designing a clean architecture that separates routing, business logic, and database access was initially challenging. Solved by adopting a standard Go project layout with distinct packages for handlers, services, and models."
+      },
+      {
+        "title": "Efficient JSON Payload Parsing",
+        "description": "Handling variable JSON structures for different financial transactions required careful data validation. Implemented Go structs with strict JSON tags and custom validation logic to ensure data integrity before database insertion."
+      }
+    ],
+    "teams": null,
+    "image": "/go-cashflow-api.jpg"
+  },
+  {
+    "title": "Go Goroutines API Test",
+    "slug": "go-goroutines-api-test",
+    "tagline": "Exploring concurrency and performance in Go",
+    "description": "An experimental backend project created to test and implement Go's concurrency model, utilizing goroutines to optimize API performance and handle multiple tasks simultaneously.",
+    "fullDescription": "This repository serves as a technical sandbox for mastering concurrent programming in Go. By implementing goroutines, the project explores how to efficiently handle concurrent API requests, testing the limits and performance benefits of Go's lightweight thread management.",
+    "url": null,
+    "code": "https://github.com/Haresz/go-goroutines-api-test",
+    "screenshots": [
+      { "src": "/goroutines-api-test.jpg", "alt": "Concurrency testing and log output screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Go (Golang)",
+        "desc": "Used specifically to leverage its native concurrency features (goroutines and channels)."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Goroutines", "reason": "Implemented to handle asynchronous operations and concurrent requests without blocking the main execution thread." }
+    ],
+    "challenges": [
+      {
+        "title": "Grasping Asynchronous Concepts in Go",
+        "description": "The steepest learning curve was fundamentally understanding how asynchronous programming works in Go. It took dedicated time and practice to shift from synchronous thinking to fully comprehending how goroutines operate and execute concurrently without blocking the main process."
+      }
+    ],
+    "teams": null,
+    "image": "/goroutines-api-test.jpg"
+  },
+  {
+    "title": "Quizies",
+    "slug": "quizies",
+    "tagline": "An interactive and engaging quiz platform",
+    "description": "A modern web application designed to deliver an engaging and seamless quiz-taking experience. Built with a focus on fast performance and an intuitive user interface, Quizies allows users to test their knowledge interactively with real-time feedback.",
+    "fullDescription": "Problem: Many quiz platforms suffer from cluttered interfaces and slow transitions, which detract from the learning and assessment experience.\n\nSolution: Developed a streamlined, highly responsive quiz application using modern frontend technologies. The platform features dynamic question rendering, real-time score tracking, and a clean, accessible design (incorporating 3D flat aesthetics) that keeps users focused on the content.\n\nRole: Frontend Developer responsible for the end-to-end user interface, animation transitions, and state management.\n\nOutcome: A fast, mobile-friendly interactive quiz platform that provides instant feedback and a smooth user journey from the first question to the final result.",
+    "url": "https://quizies.vercel.app/",
+    "code": "https://github.com/Haresz/quizies",
+    "screenshots": [
+      { "src": "/quizies.png", "alt": "Quizies application screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "React & Next.js",
+        "desc": "Used as the core framework for building the dynamic user interface, managing component states, and ensuring fast rendering."
+      },
+      {
+        "title": "Tailwind CSS",
+        "desc": "Applied for rapid UI development, ensuring a responsive, clean, and modern aesthetic across all devices."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "React Ecosystem", "reason": "Component-based architecture enables a modular design for quiz questions, results tracking, and seamless navigation." },
+      { "name": "Tailwind CSS", "reason": "Utility-first classes allow for a highly customized UI and responsive layouts without the overhead of heavy custom CSS files." }
+    ],
+    "challenges": [
+      {
+        "title": "State Management for Quiz Progress",
+        "description": "Tracking user answers, calculating scores in real-time, and managing transitions between questions required a robust state management approach to ensure no data is lost or delayed during the session."
+      },
+      {
+        "title": "Responsive Layout for Dynamic Content",
+        "description": "Designing a fluid layout that gracefully handles varying text lengths for questions and multiple-choice options, ensuring readability and interactive consistency on both desktop and small mobile screens."
+      }
+    ],
+    "teams": null,
+    "image": "/quizies.png"
+  },
+  {
+    "title": "The Blog",
+    "slug": "the-blog",
+    "tagline": "A full-featured blog platform with CRUD and pagination",
+    "description": "Website Blog is a web application developed using Next.js framework, Chakra UI for styling, and Redux Toolkit for state management. It allows users to create, edit, and view blog posts. The application provides a user-friendly interface with features like pagination and responsive design.",
+    "fullDescription": "Problem: There was a need for a clean, performant blog platform that supports full CRUD operations — creating, reading, updating, and deleting posts — with user authentication and paginated content discovery.\n\nSolution: Built a full-featured blog using Next.js with Chakra UI for a polished interface, Redux Toolkit for state management across auth and post data, Formik with Yup for validated forms, and js-cookie for session persistence.\n\nRole: Developed the entire frontend — implemented cookie-based authentication flow, built the Redux slices for posts and user state, designed the paginated post listing with infinite scroll, and created the form system with Formik and Yup validation schemas.\n\nOutcome: Delivered a fully functional blog platform where users can register, log in, create and edit posts, and browse content with smooth pagination.",
+    "url": "https://website-blog-ashen.vercel.app/",
+    "code": "https://github.com/Haresz/website-blog",
+    "screenshots": [
+      { "src": "/project2.jpg", "alt": "Homepage screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Next.js: ",
+        "desc": "A React framework for building server-side rendered and statically generated web applications."
+      },
+      {
+        "title": "Chakra UI: ",
+        "desc": "A simple, modular, and accessible component library for React applications."
+      },
+      {
+        "title": "Redux Toolkit: ",
+        "desc": " The official, opinionated, batteries-included toolset for efficient Redux development."
+      },
+      {
+        "title": "Axios: ",
+        "desc": "A promise-based HTTP client for making API requests."
+      },
+      {
+        "title": "Formik: ",
+        "desc": "A form library for React that helps with form handling and validation."
+      },
+      {
+        "title": "Yup: ",
+        "desc": "A schema-based validation library for JavaScript."
+      },
+      {
+        "title": "js-cookie: ",
+        "desc": "A JavaScript API for handling browser cookies."
+      },
+      {
+        "title": "UUID: ",
+        "desc": "A library for generating unique identifiers."
+      },
+      {
+        "title": "Framer Motion:",
+        "desc": " A library for creating smooth animations in React applications."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for SEO-friendly blog posts and fast initial page loads across the reading experience." },
+      { "name": "Redux Toolkit", "reason": "Centralized state management for user authentication, post data, and UI state with efficient re-renders." },
+      { "name": "Formik + Yup", "reason": "Robust form handling for post creation and editing with schema-based validation ensuring data integrity." },
+      { "name": "Chakra UI", "reason": "Accessible, composable component library for building a clean and consistent blog interface quickly." },
+      { "name": "Axios", "reason": "HTTP client for API requests with interceptors for attaching auth tokens and handling error responses." },
+      { "name": "js-cookie", "reason": "Lightweight cookie management for persisting authentication tokens across page refreshes." }
+    ],
+    "challenges": [
+      {
+        "title": "Redux State Persistence Across Navigations",
+        "description": "Blog posts and auth state were lost on page refresh because Redux is in-memory only. Solved by implementing Redux Persist with a localStorage whitelist for auth and post slices, ensuring data survives refreshes without unnecessary re-fetching."
+      },
+      {
+        "title": "Complex Form Validation with Formik and Yup",
+        "description": "The post creation form required multi-field validation with conditional rules — title length, body minimum word count, and required tags. Built custom Yup schemas with .when() conditionals and connected them to Formik's error state for real-time validation feedback."
+      }
+    ],
+    "teams": null,
+    "image": "/project2.jpg"
+  },
+  {
+    "title": "Event Management",
+    "slug": "event-management",
+    "tagline": "An MVP platform for creating, promoting, and attending events",
+    "description": "The main goal of the MVP is to create a simple and functional event management platform that allows event organizers to create and promote events, while attendees can browse and register for those events.",
+    "fullDescription": "Problem: Event organizers lacked a simple, centralized platform to create, promote, and manage events while attendees needed an easy way to discover and register for events in their area.\n\nSolution: Built an MVP event management platform using Next.js with a full Express.js backend, MySQL database with Prisma ORM, and TypeScript throughout. Features include event CRUD for organizers, a registration flow for attendees, search with filters, and role-based access control.\n\nRole: Handled fullstack development — designed the Prisma schema for events, registrations, and users, built the Express.js REST API with authentication middleware, and implemented the Next.js frontend with Redux state management and Formik forms.\n\nOutcome: Delivered a functional MVP platform that handles event creation, discovery, and registration with a clean separation between organizer and attendee experiences.",
+    "url": null,
+    "code": "https://github.com/Haresz/website-blog",
+    "screenshots": [
+      { "src": "/project4.jpg", "alt": "Homepage screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Next.js: ",
+        "desc": "A React framework for building server-side rendered and statically generated web applications."
+      },
+      {
+        "title": "Chakra UI: ",
+        "desc": "A simple, modular, and accessible component library for React applications."
+      },
+      {
+        "title": "Redux Toolkit: ",
+        "desc": " The official, opinionated, batteries-included toolset for efficient Redux development."
+      },
+      {
+        "title": "Axios: ",
+        "desc": "A promise-based HTTP client for making API requests."
+      },
+      {
+        "title": "Formik: ",
+        "desc": "A form library for React that helps with form handling and validation."
+      },
+      {
+        "title": "Yup: ",
+        "desc": "A schema-based validation library for JavaScript."
+      },
+      {
+        "title": "js-cookie: ",
+        "desc": "A JavaScript API for handling browser cookies."
+      },
+      {
+        "title": "TypeScript: ",
+        "desc": "A superset of JavaScript that adds static typing, allowing developers to catch errors early during development and enhance code quality."
+      },
+      {
+        "title": "MySQL:",
+        "desc": "A popular open-source relational database management system (RDBMS) that uses SQL for querying and managing data."
+      },
+      {
+        "title": "Prisma ORM:",
+        "desc": "A modern database toolkit and ORM (Object-Relational Mapping) for TypeScript and JavaScript, simplifying database access and schema management."
+      },
+      {
+        "title": "Express.js:",
+        "desc": "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Frontend framework with SSR for SEO-friendly event listings and fast page transitions between search and detail views." },
+      { "name": "Express.js", "reason": "Lightweight REST API backend handling event CRUD, user authentication, and registration logic with middleware architecture." },
+      { "name": "Prisma ORM", "reason": "Type-safe database access for complex relational queries across events, registrations, and user accounts." },
+      { "name": "MySQL", "reason": "Relational database for structured event data, user roles, and registration records with ACID compliance." },
+      { "name": "TypeScript", "reason": "Static typing across the fullstack codebase to catch errors early and improve developer experience with autocompletion." },
+      { "name": "Redux Toolkit", "reason": "Centralized state for event listings, user sessions, and UI state with efficient re-rendering via selectors." },
+      { "name": "Formik + Yup", "reason": "Form handling and validation for event creation and user registration with real-time error feedback." }
+    ],
+    "challenges": [
+      {
+        "title": "Prisma Schema Design for Relational Models",
+        "description": "Designing the database schema required balancing normalization with query performance. Events, users, and registrations had complex many-to-many relationships. Iterated on the Prisma schema three times to optimize for the most common query patterns — event listing with registration counts and user dashboards."
+      },
+      {
+        "title": "Role-Based Access Control",
+        "description": "Organizers and attendees needed different permissions — organizers can create/edit events while attendees can only browse and register. Implemented middleware that checks JWT claims and maps them to route-level permissions, ensuring API endpoints enforce the correct access rules."
+      },
+      {
+        "title": "TypeScript Across Fullstack",
+        "description": "Sharing TypeScript types between the Next.js frontend and Express.js backend reduced runtime errors but required careful setup. Created a shared types package and configured both tsconfig files to reference it, ensuring type consistency for API contracts."
+      }
+    ],
+    "teams": null,
+    "image": "/project4.jpg"
+  },
+  {
+    "title": "Resthere",
+    "slug": "resthere",
+    "tagline": "Your Ideal Place to Rest — a hotel booking platform",
+    "description": "RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a \"stay for everyone\" philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.",
+    "fullDescription": "Problem: Travelers struggle to find and book accommodations across scattered platforms — hotels, villas, and homestays each have their own booking systems, making it hard to compare options and find the best place to stay.\n\nSolution: Built a unified booking platform using Next.js with Leaflet interactive maps, real-time property availability, Google OAuth for frictionless sign-in, and a multi-step booking flow. The platform embraces a \"stay for everyone\" philosophy with a clean, accessible design.\n\nRole: Fullstack development using Agile methodology with two-week sprints tracked in Jira. Implemented the Express.js API with Prisma ORM, designed the MySQL schema, built the Redux state management with Thunk for async operations, and developed the frontend with Tailwind CSS.\n\nOutcome: Delivered a complete booking platform that allows users to browse properties on an interactive map, check availability, and complete bookings — all within a seamless, responsive interface.",
+    "url": "https://jcwdol130205.purwadhikabootcamp.com/",
+    "code": "https://github.com/fabianindra/finalproject",
+    "screenshots": [
+      { "src": "/project5.png", "alt": "Homepage screenshot" },
+      { "src": "/project5.png", "alt": "Booking flow screenshot" },
+      { "src": "/project5.png", "alt": "Map view screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Next.js",
+        "desc": "A React framework for building server-side rendered and statically generated web applications."
+      },
+      {
+        "title": "Jira",
+        "desc": "A project management tool used for tracking issues, bugs, and project progress."
+      },
+      {
+        "title": "Redux Thunk",
+        "desc": "A middleware for Redux that allows for handling asynchronous actions."
+      },
+      {
+        "title": "Redux.js",
+        "desc": "A state management library for JavaScript applications, often used with React."
+      },
+      {
+        "title": "Axios",
+        "desc": "A promise-based HTTP client for making API requests."
+      },
+      {
+        "title": "Agile Development",
+        "desc": "A methodology for iterative and incremental software development, emphasizing collaboration and flexibility."
+      },
+      {
+        "title": "Tailwind CSS",
+        "desc": "A utility-first CSS framework for creating custom designs without leaving your HTML."
+      },
+      {
+        "title": "React.js",
+        "desc": "A JavaScript library for building user interfaces, particularly single-page applications."
+      },
+      {
+        "title": "React Hooks",
+        "desc": "A feature in React that allows you to use state and other React features without writing a class."
+      },
+      {
+        "title": "TypeScript",
+        "desc": "A typed superset of JavaScript that compiles to plain JavaScript, offering static type checking."
+      },
+      {
+        "title": "Chakra UI",
+        "desc": "A simple, modular, and accessible component library for React applications."
+      },
+      {
+        "title": "Leaflet",
+        "desc": "An open-source JavaScript library for interactive maps."
+      },
+      {
+        "title": "Leaflet.js",
+        "desc": "The JavaScript implementation of the Leaflet library for interactive maps."
+      },
+      {
+        "title": "Formik",
+        "desc": "A form library for React that helps with form handling and validation."
+      },
+      {
+        "title": "Yup",
+        "desc": "A schema-based validation library for JavaScript."
+      },
+      {
+        "title": "Express.js",
+        "desc": "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications."
+      },
+      {
+        "title": "Teamwork",
+        "desc": "A project management and collaboration tool designed to enhance team productivity."
+      },
+      {
+        "title": "Prisma ORM",
+        "desc": "A modern database toolkit and ORM (Object-Relational Mapping) for TypeScript and JavaScript, simplifying database access and schema management."
+      },
+      {
+        "title": "nodemon",
+        "desc": "A utility that monitors for changes in files and automatically restarts the server."
+      },
+      {
+        "title": "MySQL",
+        "desc": "A popular open-source relational database management system (RDBMS) that uses SQL for querying and managing data."
+      },
+      {
+        "title": "nodemailer",
+        "desc": "A module for Node.js applications to send emails."
+      },
+      {
+        "title": "cors",
+        "desc": "A middleware for enabling Cross-Origin Resource Sharing (CORS) in Node.js applications."
+      },
+      {
+        "title": "Multer",
+        "desc": "A middleware for handling `multipart/form-data`, primarily used for file uploads."
+      },
+      {
+        "title": "Cron",
+        "desc": "A time-based job scheduler in Unix-like operating systems for executing scheduled tasks."
+      },
+      {
+        "title": "Google OAuth2",
+        "desc": "An authentication protocol for allowing secure access to Google services using OAuth2."
+      },
+      {
+        "title": "JSON Web Token (JWT)",
+        "desc": "A compact, URL-safe means of representing claims to be transferred between two parties."
+      },
+      {
+        "title": "bcrypt",
+        "desc": "A library for hashing passwords and comparing hashed passwords securely."
+      },
+      {
+        "title": "Passport",
+        "desc": "An authentication middleware for Node.js that supports a variety of authentication strategies."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for SEO-friendly property listings and fast page loads across the booking flow." },
+      { "name": "Redux Thunk", "reason": "Managing async booking state — handling property searches, availability checks, and reservation API calls without blocking the UI." },
+      { "name": "Redux.js", "reason": "Centralized state management for user auth, cart/booking data, and filter preferences across the app." },
+      { "name": "Leaflet / Leaflet.js", "reason": "Interactive maps for browsing properties by location, letting users explore accommodations geographically." },
+      { "name": "Prisma ORM", "reason": "Type-safe database access for complex relational queries (properties, bookings, users, reviews)." },
+      { "name": "MySQL", "reason": "Relational database for structured booking data — properties, reservations, user accounts, and payment records." },
+      { "name": "Express.js", "reason": "RESTful API backend handling auth, booking logic, file uploads, and email notifications." },
+      { "name": "Google OAuth2", "reason": "Secure, one-click social login so users can sign up without creating yet another password." },
+      { "name": "Tailwind CSS", "reason": "Rapid UI development with utility classes, keeping the design clean and consistent across responsive breakpoints." },
+      { "name": "TypeScript", "reason": "Static typing to catch bugs early in a large codebase with complex data models and API contracts." },
+      { "name": "Agile Development", "reason": "Iterative two-week sprints with Jira tracking, enabling rapid feedback and course correction during the bootcamp project." }
+    ],
+    "challenges": [
+      {
+        "title": "Complex Booking State Management",
+        "description": "The multi-step booking flow (property selection → date picker → guest info → payment) required tracking partial data across steps without losing progress. Managed this with Redux Thunk middleware — each step dispatches async actions that validate and persist intermediate state, with a booking slice that resets on completion or cancellation."
+      },
+      {
+        "title": "Map Integration with Property Data",
+        "description": "Syncing Leaflet map markers with filtered property results was challenging — when users zoom, pan, or apply filters, the map markers and list view needed to stay in sync. Solved by debouncing map move events and dispatching a Redux action that updates both the marker layer and the property list simultaneously."
+      }
+    ],
+    "teams": [
+      {
+        "title": "Fabian Winandi:",
+        "desc": "In our team, both Fabian and I work as Fullstack Web Developers. We focus on creating a solid and organized structure for our projects by implementing a well-defined foldering system. This approach ensures efficient collaboration and streamlined development processes, enhancing productivity and consistency across our projects."
+      }
+    ],
+    "image": "/project5.png"
+  },
+  {
+    "title": "Quiser",
+    "slug": "quiser",
+    "tagline": "Simplifying your learning journey with interactive quizzes",
+    "description": "Quiser: Simplifying Your Learning Journey. Quiser is an intuitive platform designed to create and manage quizzes effortlessly. Aimed at enhancing the learning experience, it offers a clean and user-friendly interface that allows users to focus on the content. Whether for education, training, or fun, Quiser enables the creation of engaging quizzes with ease.",
+    "fullDescription": "Problem: Creating and managing quizzes is tedious with existing tools — educators and trainers need a simple, engaging platform that handles quiz creation, taking, automatic grading, and performance tracking without the complexity of enterprise LMS systems.\n\nSolution: Built an intuitive quiz platform using Next.js with Chakra UI and Tailwind CSS for a clean interface, Framer Motion for smooth question transitions, and custom React hooks for real-time quiz state management including timers and scoring.\n\nRole: Focused on frontend development — designed the quiz-taking interface with animated transitions, implemented the scoring engine with automatic grading, built the responsive layout for mobile quiz-taking, and created the quiz creation form with Formik validation.\n\nOutcome: Delivered a polished quiz platform where users can create, share, and take quizzes with smooth animations, real-time scoring, and a clean interface that works across all devices.",
+    "url": "https://quiser.vercel.app/",
+    "code": "https://github.com/Haresz/quiser",
+    "screenshots": [
+      { "src": "/project6.jpg", "alt": "Homepage screenshot" },
+      { "src": "/project6.jpg", "alt": "Quiz creation interface screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Next.js",
+        "desc": "A powerful React framework for server-side rendering and static site generation."
+      },
+      {
+        "title": "Chakra UI",
+        "desc": "A modern React component library that provides a set of accessible and reusable components for building user interfaces."
+      },
+      {
+        "title": "Tailwind CSS",
+        "desc": "A utility-first CSS framework that allows for rapidly building custom user interfaces."
+      },
+      {
+        "title": "TypeScript",
+        "desc": "A typed superset of JavaScript that compiles to plain JavaScript, offering static type checking."
+      },
+      {
+        "title": "React.js",
+        "desc": "A JavaScript library for building user interfaces, known for its component-based architecture."
+      },
+      {
+        "title": "React Hooks",
+        "desc": "A feature in React that allows you to manage state and other React features without writing classes."
+      },
+      {
+        "title": "Framer Motion",
+        "desc": "A library for creating animations and interactions in React applications."
+      },
+      {
+        "title": "Phosphor Icons",
+        "desc": "A flexible icon family for interfaces, diagrams, and presentations."
+      },
+      {
+        "title": "React Use Downloader",
+        "desc": "A React hook that provides a simple way to download files from the client side."
+      },
+      {
+        "title": "ESLint",
+        "desc": "A tool for identifying and fixing linting errors in JavaScript code."
+      },
+      {
+        "title": "TypeScript",
+        "desc": "Enhances code quality and development experience by adding static types to JavaScript."
+      },
+      {
+        "title": "PostCSS",
+        "desc": "A tool for transforming CSS with JavaScript plugins, enabling various optimizations and enhancements."
+      },
+      {
+        "title": "Autoprefixer",
+        "desc": "A PostCSS plugin that adds vendor prefixes to CSS rules, ensuring cross-browser compatibility."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for quiz pages and static generation for landing pages, ensuring fast load times for learners." },
+      { "name": "Chakra UI", "reason": "Accessible, composable components for building the quiz interface quickly while maintaining consistency." },
+      { "name": "Tailwind CSS", "reason": "Utility-first styling for rapid prototyping of quiz layouts, score displays, and responsive grids." },
+      { "name": "Framer Motion", "reason": "Smooth transitions between quiz questions, progress animations, and interactive feedback on answers." },
+      { "name": "TypeScript", "reason": "Type safety for quiz data models (questions, options, scores) to prevent runtime errors during quiz-taking." },
+      { "name": "React Hooks", "reason": "Custom hooks for quiz state management — tracking current question, timer, score, and answer history." },
+      { "name": "Formik + Yup", "reason": "Robust form handling for quiz creation with schema-based validation ensuring all questions have valid options." }
+    ],
+    "challenges": [
+      {
+        "title": "Quiz State Transitions",
+        "description": "Managing real-time quiz state — timer countdown, answer selection, scoring logic, and transitions between questions — required careful orchestration to avoid losing progress. Built custom React hooks (useQuizTimer, useQuizScore) that encapsulate each concern, with a central useQuizState hook that coordinates question progression and persists partial results."
+      },
+      {
+        "title": "Smooth Animations Under Load",
+        "description": "Framer Motion animations for question transitions and score reveals were causing frame drops on mobile. Optimized by using layout animations instead of AnimatePresence for question swaps, lazy-loading animation variants, and using will-change hints strategically to keep transitions at 60fps."
+      }
+    ],
+    "teams": [
+      {
+        "title": "Nizar Ali Rifa`i :",
+        "desc": "Collaborated as the UI/UX Designer, focusing on creating a user-centric design that enhances the overall user experience."
+      }
+    ],
+    "image": "/project6.jpg"
+  }
+]

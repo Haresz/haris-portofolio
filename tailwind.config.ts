@@ -9,12 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#FFB534",
+        pink: "#F5199B",
+        blue: "#1B3FE0",
+        navy: "#0B0B2A",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        display: ["var(--font-display)"],
+        body: ["var(--font-montserrat)"],
       },
     },
   },

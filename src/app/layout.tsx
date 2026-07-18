@@ -4,7 +4,7 @@ import { Providers } from "./providers";
 import { fonts } from "./fonts";
 
 export const metadata: Metadata = {
-  title: "Haris’s Portofolio",
+  title: "Haris's Portofolio",
   description: "Muhammad Haris Al Fikri",
 };
 
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fonts.montserrat.variable}>
+      <body className={`${fonts.montserrat.variable} ${fonts.spaceGrotesk.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

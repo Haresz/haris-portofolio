@@ -1,12 +1,10 @@
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
-import SectionEducation from "@/components/sestion/SectionEducation";
+import SectionAbout from "@/components/sestion/SectionAbout";
 import SectionExperience from "@/components/sestion/SectionExperience";
-import SectionHome from "@/components/sestion/SectionHome";
 import SectionProjects from "@/components/sestion/SectionProjects";
 import SectionSkill from "@/components/sestion/SectionSkill";
 import Head from "next/head";
-import { Box, Image, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -15,11 +13,10 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <SectionHome />
-      <SectionExperience />
-      <SectionEducation />
-      <SectionSkill />
       <SectionProjects />
+      <SectionExperience />
+      <SectionSkill />
+      <SectionAbout />
       <Footer />
     </>
   );
