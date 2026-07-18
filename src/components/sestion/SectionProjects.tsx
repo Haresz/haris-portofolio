@@ -24,7 +24,7 @@ export default function SectionProjects() {
         bg={'#F5199B'}
         className="sticky top-[72px]"
         spacing={{ base: 6, md: 0 }}
-        zIndex={80}
+        zIndex={70}
       >
         <Stack flex={1}>
           <Heading
