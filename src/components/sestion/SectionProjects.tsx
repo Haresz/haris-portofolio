@@ -8,8 +8,8 @@ import projectData from '../../data.json';
 
 export default function SectionProjects() {
   const { download } = useDownloader();
-  const fileUrl = '/MuhammadHaris_CV.pdf';
-  const filename = 'MuhammadHaris_CV.pdf';
+  const fileUrl = '/MuhammadHarisCV.pdf';
+  const filename = 'MuhammadHarisCV.pdf';
 
   return (
     <Box id="project"
