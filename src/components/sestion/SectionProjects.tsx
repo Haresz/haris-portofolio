@@ -105,6 +105,7 @@ export default function SectionProjects() {
                 code={project.code || ""}
                 image={project.image}
                 teams={project.teams || []}
+                tagline={project.tagline || ""}
               />
             </div>
 

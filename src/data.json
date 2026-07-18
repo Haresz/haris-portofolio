@@ -1,108 +1,186 @@
 [
-  {
-    "title": "Company Profile PT Chakra Radha Mustika",
-    "slug": "chakra-radha-mustika",
-    "tagline": "A comprehensive digital presence for PT Chakra Radha Mustika",
-    "description": "The \"Company Profile PT Chakra Radha Mustika\" project is a comprehensive digital representation of PT Chakra Radha Mustika, designed to showcase the company's services, achievements, and values. This project utilizes modern web development technologies to ensure a seamless and engaging user experience.",
-    "fullDescription": "Problem: PT Chakra Radha Mustika needed a modern, professional web presence to showcase their services, values, and company achievements to potential clients and partners. The existing online footprint was outdated and did not reflect the company's growth.\n\nSolution: Built a responsive single-page company profile using Next.js with server-side rendering for SEO optimization. The site features smooth scroll navigation, a services section, company overview, and a contact form — all designed to convert visitors into leads.\n\nRole: Led the frontend development from concept to deployment. Implemented the component architecture using React and Next.js, styled the entire interface with Tailwind CSS for rapid and consistent design, and configured Vercel deployment with proper metadata and Open Graph tags for social sharing.\n\nOutcome: Delivered a fast, mobile-first company profile that loads under 2 seconds and scores 90+ on Lighthouse performance audits.",
-    "url": "https://cakraradhamustika.com/",
+ {
+    "title": "Personal Finance Tracker",
+    "slug": "personal-finance-tracker",
+    "tagline": "A comprehensive financial management application",
+    "description": "A modern, full-stack React application for tracking personal finances with a clean, intuitive interface. Built with React, Vite, and Tailwind CSS, this app helps you manage your income and expenses efficiently with real-time data synchronization using Google Sheets as the backend.",
+    "fullDescription": "Problem: Tracking personal cashflow and habits often requires complex software or manual entry that is hard to maintain on a daily basis.\n\nSolution: Developed a custom ledger application that seamlessly integrates a web frontend with Google Sheets. The backend logic utilizes Google Apps Script (GAS) with custom doGet and doPost functions, including reliable UUID generation for transaction tracking. The UI is designed with a minimalist, 3D flat aesthetic to keep the user experience focused and clean.\n\nRole: Sole developer handling both the frontend interface and the GAS backend integration.\n\nOutcome: A fast, responsive tracking tool that centralizes financial data directly into personal spreadsheets without relying on third-party databases.",
+    "url": null,
     "code": null,
     "screenshots": [
-      { "src": "/project1.jpg", "alt": "Homepage screenshot" }
+      { "src": "/finance-tracker.png", "alt": "Dashboard screenshot" }
     ],
     "tools": [
       {
-        "title": "React and Next.js",
-        "desc": "These powerful frameworks are employed to create a dynamic and responsive web application. React ensures a smooth and interactive user interface, while Next.js optimizes performance with server-side rendering and static site generation."
+        "title": "React.js",
+        "desc": "A JavaScript library for building the interactive user interface."
+      },
+      {
+        "title": "Vite",
+        "desc": "Next-generation frontend tooling utilized for fast, optimized builds."
       },
       {
         "title": "Tailwind CSS",
-        "desc": "For styling, Tailwind CSS is used to create a visually appealing and consistent design across the website. Tailwind's utility-first approach allows for rapid development and customization, ensuring the company profile looks professional and modern."
+        "desc": "A utility-first CSS framework applied to create a clean, modern, and responsive design system rapidly."
+      },
+      {
+        "title": "Google Sheets API",
+        "desc": "Serves as the accessible, real-time database for the application."
+      },
+      {
+        "title": "Google Apps Script (GAS)",
+        "desc": "Handles the server-side logic, processing API requests (doGet/doPost), and data formatting."
       }
     ],
     "techBreakdown": [
-      { "name": "Next.js", "reason": "Server-side rendering for SEO and fast initial page loads, critical for a company profile that needs to rank in search results." },
-      { "name": "Tailwind CSS", "reason": "Utility-first styling for rapid development of a consistent, professional design system without writing custom CSS from scratch." },
-      { "name": "React", "reason": "Component-based architecture for building reusable UI sections — hero, services, about, and contact — that are easy to maintain." }
+      { "name": "React + Vite", "reason": "Provides a snappy, highly responsive frontend experience critical for daily habit and finance tracking." },
+      { "name": "Google Sheets & GAS", "reason": "Offers a zero-cost, easily accessible backend solution where data remains entirely in the user's control." }
     ],
     "challenges": [
       {
-        "title": "SEO Optimization for Single-Page Design",
-        "description": "Single-page applications typically struggle with SEO since content is rendered client-side. Solved this by leveraging Next.js SSR to pre-render all sections on the server, adding proper meta tags and Open Graph data, resulting in full Google indexing."
-      },
-      {
-        "title": "Responsive Multi-Column Layouts",
-        "description": "The company profile had complex multi-column layouts for services and team sections that needed to collapse gracefully on mobile. Used Tailwind's responsive prefixes and flexbox patterns to create a fluid layout that works across all viewport sizes."
-      }
-    ],
-    "teams": [
-      {
-        "title": "Frontend Team:",
-        "desc": "Focused on implementing the user interface, ensuring that all visual elements are intuitive, responsive, and aligned with the design specifications provided by the UI/UX team."
-      },
-      {
-        "title": "Backend Team:",
-        "desc": "Responsible for developing and managing the server-side logic, databases, and APIs. They ensure that all data is securely handled and that the backend integrates seamlessly with the frontend."
-      },
-      {
-        "title": "UI/UX Team:",
-        "desc": "asked with designing the user experience and interface, ensuring that the website is user-friendly, accessible, and visually appealing. They work closely with both the frontend and backend teams to bring the design to life."
-      }
-    ],
-    "image": "/project1.jpg"
-  },
-  {
-    "title": "XYZ Company Profile",
-    "slug": "xyz-company",
-    "tagline": "A modern company profile with smooth animations",
-    "description": "This project is a company profile for XYZ Company. The web application provides information about the company's history, team, services, and contact details. It is built using the latest web technologies to ensure a smooth and engaging user experience.",
-    "fullDescription": "Problem: XYZ Company needed to refresh their outdated corporate website with a modern, visually engaging experience that would leave a lasting impression on visitors and potential clients.\n\nSolution: Built a polished company profile using Next.js with Chakra UI for a consistent component library, Framer Motion for smooth page transitions and scroll-triggered animations, and Redux Toolkit for managing UI state like theme toggles and navigation.\n\nRole: Handled the full frontend development — designed and implemented the component architecture, integrated Framer Motion animation sequences for section reveals and hover effects, and set up Redux Toolkit slices for managing application-wide UI state.\n\nOutcome: Delivered a visually striking, animated company profile that significantly reduced bounce rate and increased average session duration compared to the previous site.",
-    "url": "https://xyz-company-cyan.vercel.app/",
-    "code": "https://github.com/Haresz/xyz-company",
-    "screenshots": [
-      { "src": "/project3.jpg", "alt": "Homepage screenshot" }
-    ],
-    "tools": [
-      {
-        "title": "Next.js: ",
-        "desc": "A React framework for building server-side rendered and statically generated web applications."
-      },
-      {
-        "title": "Chakra UI: ",
-        "desc": "A simple, modular, and accessible component library for React applications."
-      },
-      {
-        "title": "Redux Toolkit: ",
-        "desc": " The official, opinionated, batteries-included toolset for efficient Redux development."
-      },
-      {
-        "title": "Axios: ",
-        "desc": "A promise-based HTTP client for making API requests."
-      },
-      {
-        "title": "Framer Motion:",
-        "desc": " A library for creating smooth animations in React applications."
-      }
-    ],
-    "techBreakdown": [
-      { "name": "Next.js", "reason": "File-based routing and server-side rendering for fast page loads and SEO-friendly company content." },
-      { "name": "Chakra UI", "reason": "Accessible, composable component library that accelerated UI development with built-in theming and responsive props." },
-      { "name": "Framer Motion", "reason": "Declarative animations for section reveals, hover interactions, and smooth page transitions that elevate the user experience." },
-      { "name": "Redux Toolkit", "reason": "Centralized UI state management for theme toggles, navigation state, and modal controls across the application." },
-      { "name": "Axios", "reason": "Simplified HTTP requests for fetching company data from the backend API with interceptors for error handling." }
-    ],
-    "challenges": [
-      {
-        "title": "Framer Motion Performance on Mobile",
-        "description": "Complex scroll-triggered animations caused jank on lower-end mobile devices. Solved by reducing animation complexity on small viewports using Chakra's responsive props and Framer Motion's reducedMotion mode, ensuring smooth performance."
-      },
-      {
-        "title": "Integrating Redux with Chakra UI Theme",
-        "description": "Needed Redux to persist theme preferences across page navigations while Chakra UI managed the actual theme tokens. Created a Redux slice that syncs with Chakra's useColorModeValue, using localStorage hydration on initial load."
+        "title": "Reliable Data Syncing with GAS",
+        "description": "Ensuring smooth data transmission between the React frontend and Google Apps Script endpoints required careful handling of CORS and JSON payloads via doPost."
       }
     ],
     "teams": null,
-    "image": "/project3.jpg"
+    "image": "/finance-tracker.png"
+  },
+  {
+    "title": "Planify AI – Modern Landing Page",
+    "slug": "planify-ai-landing-page",
+    "tagline": "A sleek, high-conversion landing page",
+    "description": "A sleek, high-conversion landing page designed for Planify AI, an upcoming AI-powered productivity and planning application. This repository focuses strictly on frontend excellence, demonstrating how to build a compelling first impression for a digital product through modern web design principles.",
+    "fullDescription": "Problem: New digital products require a strong, compelling visual presence to capture user interest and drive early conversions.\n\nSolution: Engineered a sleek landing page tailored for an AI productivity app. The focus was entirely on frontend execution, ensuring that animations, typography, and layout work cohesively to deliver a premium feel.\n\nRole: Frontend Developer responsible for translating design concepts into a high-performance web page.",
+    "url": "https://planify-ai.vercel.app",
+    "code": null,
+    "screenshots": [
+      { "src": "/planify-ai.png", "alt": "Landing page hero section screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "React.js",
+        "desc": "Employed to build the modular components of the landing page."
+      },
+      {
+        "title": "JavaScript",
+        "desc": "Provides the core logic and interactivity for the UI elements."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "React.js", "reason": "Component-based architecture allowed for rapid development of reusable UI sections like Hero, Features, and CTA." }
+    ],
+    "challenges": [
+      {
+        "title": "Optimizing Performance with High-Quality Assets",
+        "description": "Balancing high-quality visual assets and animations with fast load times was challenging. Solved by implementing lazy loading for images and optimizing React component rendering to maintain a 90+ Lighthouse performance score."
+      },
+      {
+        "title": "Responsive Layout Shifts",
+        "description": "Complex grid layouts and absolute positioning for background elements caused layout shifts on specific mobile viewports. Addressed this by strictly using Tailwind's responsive prefixes and testing across multiple device sizes to ensure a fluid experience."
+      }
+    ],
+    "teams": null,
+    "image": "/planify-ai.png"
+  },
+  {
+    "title": "Go Cashflow REST API",
+    "slug": "go-cashflow-rest-api",
+    "tagline": "A robust backend service for financial tracking",
+    "description": "A RESTful API built entirely with Go (Golang) designed to handle financial data operations, specifically focusing on managing and tracking cashflow efficiently.",
+    "fullDescription": "This project represents a deep dive into backend development utilizing Go. It provides the core API infrastructure necessary for a cashflow tracking application, handling routing, data validation, and database interactions with high performance.",
+    "url": "https://go-cashflow-rest-api.vercel.app",
+    "code": "https://github.com/Haresz/go-cashflow-rest-api",
+    "screenshots": [
+      { "src": "/go-cashflow-api.jpg", "alt": "API Architecture and Postman testing screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Go (Golang)",
+        "desc": "The statically typed, compiled programming language used to build the high-performance API."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Go (Golang)", "reason": "Selected for its simplicity, fast execution speed, and excellent standard library for building REST APIs." }
+    ],
+    "challenges": [
+      {
+        "title": "Structuring Go Application for Scalability",
+        "description": "Designing a clean architecture that separates routing, business logic, and database access was initially challenging. Solved by adopting a standard Go project layout with distinct packages for handlers, services, and models."
+      },
+      {
+        "title": "Efficient JSON Payload Parsing",
+        "description": "Handling variable JSON structures for different financial transactions required careful data validation. Implemented Go structs with strict JSON tags and custom validation logic to ensure data integrity before database insertion."
+      }
+    ],
+    "teams": null,
+    "image": "/go-cashflow-api.jpg"
+  },
+  {
+    "title": "Go Goroutines API Test",
+    "slug": "go-goroutines-api-test",
+    "tagline": "Exploring concurrency and performance in Go",
+    "description": "An experimental backend project created to test and implement Go's concurrency model, utilizing goroutines to optimize API performance and handle multiple tasks simultaneously.",
+    "fullDescription": "This repository serves as a technical sandbox for mastering concurrent programming in Go. By implementing goroutines, the project explores how to efficiently handle concurrent API requests, testing the limits and performance benefits of Go's lightweight thread management.",
+    "url": null,
+    "code": "https://github.com/Haresz/go-goroutines-api-test",
+    "screenshots": [
+      { "src": "/goroutines-api-test.jpg", "alt": "Concurrency testing and log output screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "Go (Golang)",
+        "desc": "Used specifically to leverage its native concurrency features (goroutines and channels)."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "Goroutines", "reason": "Implemented to handle asynchronous operations and concurrent requests without blocking the main execution thread." }
+    ],
+    "challenges": [
+      {
+        "title": "Grasping Asynchronous Concepts in Go",
+        "description": "The steepest learning curve was fundamentally understanding how asynchronous programming works in Go. It took dedicated time and practice to shift from synchronous thinking to fully comprehending how goroutines operate and execute concurrently without blocking the main process."
+      }
+    ],
+    "teams": null,
+    "image": "/goroutines-api-test.jpg"
+  },
+  {
+    "title": "Quizies",
+    "slug": "quizies",
+    "tagline": "An interactive and engaging quiz platform",
+    "description": "A modern web application designed to deliver an engaging and seamless quiz-taking experience. Built with a focus on fast performance and an intuitive user interface, Quizies allows users to test their knowledge interactively with real-time feedback.",
+    "fullDescription": "Problem: Many quiz platforms suffer from cluttered interfaces and slow transitions, which detract from the learning and assessment experience.\n\nSolution: Developed a streamlined, highly responsive quiz application using modern frontend technologies. The platform features dynamic question rendering, real-time score tracking, and a clean, accessible design (incorporating 3D flat aesthetics) that keeps users focused on the content.\n\nRole: Frontend Developer responsible for the end-to-end user interface, animation transitions, and state management.\n\nOutcome: A fast, mobile-friendly interactive quiz platform that provides instant feedback and a smooth user journey from the first question to the final result.",
+    "url": "https://quizies.vercel.app/",
+    "code": "https://github.com/Haresz/quizies",
+    "screenshots": [
+      { "src": "/quizies.png", "alt": "Quizies application screenshot" }
+    ],
+    "tools": [
+      {
+        "title": "React & Next.js",
+        "desc": "Used as the core framework for building the dynamic user interface, managing component states, and ensuring fast rendering."
+      },
+      {
+        "title": "Tailwind CSS",
+        "desc": "Applied for rapid UI development, ensuring a responsive, clean, and modern aesthetic across all devices."
+      }
+    ],
+    "techBreakdown": [
+      { "name": "React Ecosystem", "reason": "Component-based architecture enables a modular design for quiz questions, results tracking, and seamless navigation." },
+      { "name": "Tailwind CSS", "reason": "Utility-first classes allow for a highly customized UI and responsive layouts without the overhead of heavy custom CSS files." }
+    ],
+    "challenges": [
+      {
+        "title": "State Management for Quiz Progress",
+        "description": "Tracking user answers, calculating scores in real-time, and managing transitions between questions required a robust state management approach to ensure no data is lost or delayed during the session."
+      },
+      {
+        "title": "Responsive Layout for Dynamic Content",
+        "description": "Designing a fluid layout that gracefully handles varying text lengths for questions and multiple-choice options, ensuring readability and interactive consistency on both desktop and small mobile screens."
+      }
+    ],
+    "teams": null,
+    "image": "/quizies.png"
   },
   {
     "title": "The Blog",

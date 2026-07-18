@@ -26,9 +26,10 @@ export default function Project(props: {
   url: string | undefined;
   code: string | undefined;
   image: string;
+  tagline: string;
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { title, slug, description, url, code, tools, teams, image } = props;
+  const { title, slug, description, url, code, tools, teams, image, tagline } = props;
 
   return (
     <>
@@ -45,7 +46,7 @@ export default function Project(props: {
           <Heading mt={4} as="h3" size="md" fontFamily="var(--font-display)" color={"#0B0B2A"}>
             {title}
           </Heading>
-          <i className="text-black">sort desc</i>
+          <i className="text-black line-clamp-1">{tagline}</i>
         </div>
       </div>
 
