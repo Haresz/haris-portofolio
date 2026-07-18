@@ -30,7 +30,7 @@ export default function SectionSkill() {
       pb={{ base: 10, md: 20 }}
       pt={{ base: 1, md: 10 }}
     >
-      <Title content="SKILL" />
+      <Title content="SKILL" bgColor="bg-blue" />
       <div className="container-skill flex flex-wrap justify-between md:gap-x-10 gap-y-4">
         {skills.map((skill) => {
           return <Skill key={skill} skill={skill} />;

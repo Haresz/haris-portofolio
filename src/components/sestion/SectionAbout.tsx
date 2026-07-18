@@ -14,23 +14,6 @@ export default function SectionAbout() {
         maxW="1000px"
         mx="auto"
       >
-        <Box className="halftone-lg" position="relative" flexShrink={0}>
-          <Box
-            position="absolute"
-            inset={0}
-            bg="#1B3FE0"
-            transform="translate(8px, 8px)"
-            style={{ width: 'calc(100% - 16px)', height: 'calc(100% - 16px)' }}
-          />
-          <Image
-            className="relative border-4 border-white"
-            src="/foto.jpg"
-            width={300}
-            height={300}
-            objectFit="cover"
-            style={{ filter: 'contrast(1.1) saturate(0.8)' }}
-          />
-        </Box>
         <Box flex={1}>
           <Text fontSize={{ base: 'md', md: 'lg' }} color={"white"} mb={8}>
             I am a lifelong learner and collaborator who is passionate about

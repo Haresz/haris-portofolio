@@ -12,12 +12,13 @@ export default function SectionProjects() {
   const filename = 'MuhammadHaris_CV.pdf';
 
   return (
-    <Box id="project">
+    <Box id="project"
+      my={{ base: 16, md: 16 }}
+    >
       <Stack
         direction={{ base: 'column', md: 'row' }}
         alignItems={{ base: 'start', md: 'center' }}
         justifyContent={{ base: 'center', md: 'space-between' }}
-        mt={{ base: 16, md: 16 }}
         px={{ base: 8, md: 20 }}
         py={{ base: 8, md: 10 }}
         bg={'#F5199B'}

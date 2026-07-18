@@ -16,7 +16,7 @@ export default function Title(props: any) {
       color={"white"}
     >
       {props.content}
-      <hr className="h-8 -mt-6 -mx-4 bg-pink" />
+      <hr className={"h-8 -mt-6 -mx-4 " + (props.bgColor || 'bg-pink')} />
     </Heading>
   );
 }

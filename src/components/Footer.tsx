@@ -16,14 +16,13 @@ export default function Footer() {
       px={{ base: 8, md: 20 }}
       py={{ base: 10, md: 20 }}
       bgColor={"#F5199B"}
-      textColor={"#0B0B2A"}
+      textColor={"white"}
     >
       <Heading
         as="h2"
         size="xl"
         fontFamily={"var(--font-display)"}
         fontWeight={700}
-        color={"#0B0B2A"}
       >
         Contact me!
       </Heading>
@@ -39,7 +38,7 @@ export default function Footer() {
       <Text mb={8} fontSize={{ base: "md", md: "lg" }}>
         or in my sosmed
       </Text>
-      <Stack direction={"row"} flexWrap={"wrap"} gap={8}>
+      <Stack direction={"row"} flexWrap={"wrap"} gap={8} color="white">
         <Link href={"https://www.linkedin.com/in/haris-fikri-75144b207/"}>
           <LinkedinLogo size={60} color="#0B0B2A" />
         </Link>
