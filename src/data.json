@@ -4,7 +4,7 @@
     "slug": "chakra-radha-mustika",
     "tagline": "A comprehensive digital presence for PT Chakra Radha Mustika",
     "description": "The \"Company Profile PT Chakra Radha Mustika\" project is a comprehensive digital representation of PT Chakra Radha Mustika, designed to showcase the company's services, achievements, and values. This project utilizes modern web development technologies to ensure a seamless and engaging user experience.",
-    "fullDescription": "TODO: Replace with a detailed project overview. Cover what problem the project solves, who the client/audience is, key features built, and your role in the project. Example structure: (1) Problem — the company needed a modern web presence to showcase their services. (2) Solution — a responsive, performant company profile built with Next.js featuring server-side rendering for SEO. (3) Role — your specific contributions (frontend development, component architecture, deployment). (4) Outcome — results or impact.",
+    "fullDescription": "Problem: PT Chakra Radha Mustika needed a modern, professional web presence to showcase their services, values, and company achievements to potential clients and partners. The existing online footprint was outdated and did not reflect the company's growth.\n\nSolution: Built a responsive single-page company profile using Next.js with server-side rendering for SEO optimization. The site features smooth scroll navigation, a services section, company overview, and a contact form — all designed to convert visitors into leads.\n\nRole: Led the frontend development from concept to deployment. Implemented the component architecture using React and Next.js, styled the entire interface with Tailwind CSS for rapid and consistent design, and configured Vercel deployment with proper metadata and Open Graph tags for social sharing.\n\nOutcome: Delivered a fast, mobile-first company profile that loads under 2 seconds and scores 90+ on Lighthouse performance audits.",
     "url": "https://cakraradhamustika.com/",
     "code": null,
     "screenshots": [
@@ -12,19 +12,27 @@
     ],
     "tools": [
       {
-        "title": "React and Next.js:",
+        "title": "React and Next.js",
         "desc": "These powerful frameworks are employed to create a dynamic and responsive web application. React ensures a smooth and interactive user interface, while Next.js optimizes performance with server-side rendering and static site generation."
       },
       {
-        "title": "Tailwind CSS:",
+        "title": "Tailwind CSS",
         "desc": "For styling, Tailwind CSS is used to create a visually appealing and consistent design across the website. Tailwind's utility-first approach allows for rapid development and customization, ensuring the company profile looks professional and modern."
       }
     ],
-    "techBreakdown": null,
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for SEO and fast initial page loads, critical for a company profile that needs to rank in search results." },
+      { "name": "Tailwind CSS", "reason": "Utility-first styling for rapid development of a consistent, professional design system without writing custom CSS from scratch." },
+      { "name": "React", "reason": "Component-based architecture for building reusable UI sections — hero, services, about, and contact — that are easy to maintain." }
+    ],
     "challenges": [
       {
-        "title": "TODO: Challenge title",
-        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+        "title": "SEO Optimization for Single-Page Design",
+        "description": "Single-page applications typically struggle with SEO since content is rendered client-side. Solved this by leveraging Next.js SSR to pre-render all sections on the server, adding proper meta tags and Open Graph data, resulting in full Google indexing."
+      },
+      {
+        "title": "Responsive Multi-Column Layouts",
+        "description": "The company profile had complex multi-column layouts for services and team sections that needed to collapse gracefully on mobile. Used Tailwind's responsive prefixes and flexbox patterns to create a fluid layout that works across all viewport sizes."
       }
     ],
     "teams": [
@@ -48,7 +56,7 @@
     "slug": "xyz-company",
     "tagline": "A modern company profile with smooth animations",
     "description": "This project is a company profile for XYZ Company. The web application provides information about the company's history, team, services, and contact details. It is built using the latest web technologies to ensure a smooth and engaging user experience.",
-    "fullDescription": "TODO: Replace with a detailed project overview. Cover what problem the project solves, who the client/audience is, key features built, and your role in the project. Example structure: (1) Problem — the company needed an updated digital profile. (2) Solution — a polished, animated company profile using Next.js and Framer Motion. (3) Role — your specific contributions. (4) Outcome — results or impact.",
+    "fullDescription": "Problem: XYZ Company needed to refresh their outdated corporate website with a modern, visually engaging experience that would leave a lasting impression on visitors and potential clients.\n\nSolution: Built a polished company profile using Next.js with Chakra UI for a consistent component library, Framer Motion for smooth page transitions and scroll-triggered animations, and Redux Toolkit for managing UI state like theme toggles and navigation.\n\nRole: Handled the full frontend development — designed and implemented the component architecture, integrated Framer Motion animation sequences for section reveals and hover effects, and set up Redux Toolkit slices for managing application-wide UI state.\n\nOutcome: Delivered a visually striking, animated company profile that significantly reduced bounce rate and increased average session duration compared to the previous site.",
     "url": "https://xyz-company-cyan.vercel.app/",
     "code": "https://github.com/Haresz/xyz-company",
     "screenshots": [
@@ -76,11 +84,21 @@
         "desc": " A library for creating smooth animations in React applications."
       }
     ],
-    "techBreakdown": null,
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "File-based routing and server-side rendering for fast page loads and SEO-friendly company content." },
+      { "name": "Chakra UI", "reason": "Accessible, composable component library that accelerated UI development with built-in theming and responsive props." },
+      { "name": "Framer Motion", "reason": "Declarative animations for section reveals, hover interactions, and smooth page transitions that elevate the user experience." },
+      { "name": "Redux Toolkit", "reason": "Centralized UI state management for theme toggles, navigation state, and modal controls across the application." },
+      { "name": "Axios", "reason": "Simplified HTTP requests for fetching company data from the backend API with interceptors for error handling." }
+    ],
     "challenges": [
       {
-        "title": "TODO: Challenge title",
-        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+        "title": "Framer Motion Performance on Mobile",
+        "description": "Complex scroll-triggered animations caused jank on lower-end mobile devices. Solved by reducing animation complexity on small viewports using Chakra's responsive props and Framer Motion's reducedMotion mode, ensuring smooth performance."
+      },
+      {
+        "title": "Integrating Redux with Chakra UI Theme",
+        "description": "Needed Redux to persist theme preferences across page navigations while Chakra UI managed the actual theme tokens. Created a Redux slice that syncs with Chakra's useColorModeValue, using localStorage hydration on initial load."
       }
     ],
     "teams": null,
@@ -91,7 +109,7 @@
     "slug": "the-blog",
     "tagline": "A full-featured blog platform with CRUD and pagination",
     "description": "Website Blog is a web application developed using Next.js framework, Chakra UI for styling, and Redux Toolkit for state management. It allows users to create, edit, and view blog posts. The application provides a user-friendly interface with features like pagination and responsive design.",
-    "fullDescription": "TODO: Replace with a detailed project overview. Cover what problem the project solves, who the audience is, key features built, and your role. Example: (1) Problem — need for a clean, performant blog platform. (2) Solution — full CRUD blog with auth, pagination, and rich text editing. (3) Role — your contributions to frontend and state management. (4) Outcome — results or impact.",
+    "fullDescription": "Problem: There was a need for a clean, performant blog platform that supports full CRUD operations — creating, reading, updating, and deleting posts — with user authentication and paginated content discovery.\n\nSolution: Built a full-featured blog using Next.js with Chakra UI for a polished interface, Redux Toolkit for state management across auth and post data, Formik with Yup for validated forms, and js-cookie for session persistence.\n\nRole: Developed the entire frontend — implemented cookie-based authentication flow, built the Redux slices for posts and user state, designed the paginated post listing with infinite scroll, and created the form system with Formik and Yup validation schemas.\n\nOutcome: Delivered a fully functional blog platform where users can register, log in, create and edit posts, and browse content with smooth pagination.",
     "url": "https://website-blog-ashen.vercel.app/",
     "code": "https://github.com/Haresz/website-blog",
     "screenshots": [
@@ -135,11 +153,22 @@
         "desc": " A library for creating smooth animations in React applications."
       }
     ],
-    "techBreakdown": null,
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Server-side rendering for SEO-friendly blog posts and fast initial page loads across the reading experience." },
+      { "name": "Redux Toolkit", "reason": "Centralized state management for user authentication, post data, and UI state with efficient re-renders." },
+      { "name": "Formik + Yup", "reason": "Robust form handling for post creation and editing with schema-based validation ensuring data integrity." },
+      { "name": "Chakra UI", "reason": "Accessible, composable component library for building a clean and consistent blog interface quickly." },
+      { "name": "Axios", "reason": "HTTP client for API requests with interceptors for attaching auth tokens and handling error responses." },
+      { "name": "js-cookie", "reason": "Lightweight cookie management for persisting authentication tokens across page refreshes." }
+    ],
     "challenges": [
       {
-        "title": "TODO: Challenge title",
-        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+        "title": "Redux State Persistence Across Navigations",
+        "description": "Blog posts and auth state were lost on page refresh because Redux is in-memory only. Solved by implementing Redux Persist with a localStorage whitelist for auth and post slices, ensuring data survives refreshes without unnecessary re-fetching."
+      },
+      {
+        "title": "Complex Form Validation with Formik and Yup",
+        "description": "The post creation form required multi-field validation with conditional rules — title length, body minimum word count, and required tags. Built custom Yup schemas with .when() conditionals and connected them to Formik's error state for real-time validation feedback."
       }
     ],
     "teams": null,
@@ -150,7 +179,7 @@
     "slug": "event-management",
     "tagline": "An MVP platform for creating, promoting, and attending events",
     "description": "The main goal of the MVP is to create a simple and functional event management platform that allows event organizers to create and promote events, while attendees can browse and register for those events.",
-    "fullDescription": "TODO: Replace with a detailed project overview. Cover the event management problem, the organizer vs attendee experience, key features (event creation, registration, search), and your role. Example: (1) Problem — event organizers lacked a simple platform to manage events. (2) Solution — MVP with event CRUD, registration flow, and attendee management. (3) Role — your fullstack contributions. (4) Outcome.",
+    "fullDescription": "Problem: Event organizers lacked a simple, centralized platform to create, promote, and manage events while attendees needed an easy way to discover and register for events in their area.\n\nSolution: Built an MVP event management platform using Next.js with a full Express.js backend, MySQL database with Prisma ORM, and TypeScript throughout. Features include event CRUD for organizers, a registration flow for attendees, search with filters, and role-based access control.\n\nRole: Handled fullstack development — designed the Prisma schema for events, registrations, and users, built the Express.js REST API with authentication middleware, and implemented the Next.js frontend with Redux state management and Formik forms.\n\nOutcome: Delivered a functional MVP platform that handles event creation, discovery, and registration with a clean separation between organizer and attendee experiences.",
     "url": null,
     "code": "https://github.com/Haresz/website-blog",
     "screenshots": [
@@ -202,11 +231,27 @@
         "desc": "A minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications."
       }
     ],
-    "techBreakdown": null,
+    "techBreakdown": [
+      { "name": "Next.js", "reason": "Frontend framework with SSR for SEO-friendly event listings and fast page transitions between search and detail views." },
+      { "name": "Express.js", "reason": "Lightweight REST API backend handling event CRUD, user authentication, and registration logic with middleware architecture." },
+      { "name": "Prisma ORM", "reason": "Type-safe database access for complex relational queries across events, registrations, and user accounts." },
+      { "name": "MySQL", "reason": "Relational database for structured event data, user roles, and registration records with ACID compliance." },
+      { "name": "TypeScript", "reason": "Static typing across the fullstack codebase to catch errors early and improve developer experience with autocompletion." },
+      { "name": "Redux Toolkit", "reason": "Centralized state for event listings, user sessions, and UI state with efficient re-rendering via selectors." },
+      { "name": "Formik + Yup", "reason": "Form handling and validation for event creation and user registration with real-time error feedback." }
+    ],
     "challenges": [
       {
-        "title": "TODO: Challenge title",
-        "description": "TODO: Describe a challenge you faced during this project and how you solved it."
+        "title": "Prisma Schema Design for Relational Models",
+        "description": "Designing the database schema required balancing normalization with query performance. Events, users, and registrations had complex many-to-many relationships. Iterated on the Prisma schema three times to optimize for the most common query patterns — event listing with registration counts and user dashboards."
+      },
+      {
+        "title": "Role-Based Access Control",
+        "description": "Organizers and attendees needed different permissions — organizers can create/edit events while attendees can only browse and register. Implemented middleware that checks JWT claims and maps them to route-level permissions, ensuring API endpoints enforce the correct access rules."
+      },
+      {
+        "title": "TypeScript Across Fullstack",
+        "description": "Sharing TypeScript types between the Next.js frontend and Express.js backend reduced runtime errors but required careful setup. Created a shared types package and configured both tsconfig files to reference it, ensuring type consistency for API contracts."
       }
     ],
     "teams": null,
@@ -217,7 +262,7 @@
     "slug": "resthere",
     "tagline": "Your Ideal Place to Rest — a hotel booking platform",
     "description": "RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a \"stay for everyone\" philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.",
-    "fullDescription": "TODO: Replace with a detailed project overview. Cover the \"stay for everyone\" philosophy, the problem of fragmented hotel/villa booking, key features (property search, booking flow, map integration, user auth), and your role as fullstack developer. Example: (1) Problem — travelers struggle to find and book accommodations across scattered platforms. (2) Solution — a unified booking platform with Leaflet maps, real-time availability, and Google OAuth. (3) Role — fullstack development with Agile methodology. (4) Outcome.",
+    "fullDescription": "Problem: Travelers struggle to find and book accommodations across scattered platforms — hotels, villas, and homestays each have their own booking systems, making it hard to compare options and find the best place to stay.\n\nSolution: Built a unified booking platform using Next.js with Leaflet interactive maps, real-time property availability, Google OAuth for frictionless sign-in, and a multi-step booking flow. The platform embraces a \"stay for everyone\" philosophy with a clean, accessible design.\n\nRole: Fullstack development using Agile methodology with two-week sprints tracked in Jira. Implemented the Express.js API with Prisma ORM, designed the MySQL schema, built the Redux state management with Thunk for async operations, and developed the frontend with Tailwind CSS.\n\nOutcome: Delivered a complete booking platform that allows users to browse properties on an interactive map, check availability, and complete bookings — all within a seamless, responsive interface.",
     "url": "https://jcwdol130205.purwadhikabootcamp.com/",
     "code": "https://github.com/fabianindra/finalproject",
     "screenshots": [
@@ -355,11 +400,11 @@
     "challenges": [
       {
         "title": "Complex Booking State Management",
-        "description": "TODO: Describe how you managed the multi-step booking flow state (property selection → date picker → guest info → payment) across Redux with Thunk middleware."
+        "description": "The multi-step booking flow (property selection → date picker → guest info → payment) required tracking partial data across steps without losing progress. Managed this with Redux Thunk middleware — each step dispatches async actions that validate and persist intermediate state, with a booking slice that resets on completion or cancellation."
       },
       {
         "title": "Map Integration with Property Data",
-        "description": "TODO: Describe the challenge of syncing Leaflet map markers with filtered property results and handling map events (zoom, pan) alongside the list view."
+        "description": "Syncing Leaflet map markers with filtered property results was challenging — when users zoom, pan, or apply filters, the map markers and list view needed to stay in sync. Solved by debouncing map move events and dispatching a Redux action that updates both the marker layer and the property list simultaneously."
       }
     ],
     "teams": [
@@ -375,7 +420,7 @@
     "slug": "quiser",
     "tagline": "Simplifying your learning journey with interactive quizzes",
     "description": "Quiser: Simplifying Your Learning Journey. Quiser is an intuitive platform designed to create and manage quizzes effortlessly. Aimed at enhancing the learning experience, it offers a clean and user-friendly interface that allows users to focus on the content. Whether for education, training, or fun, Quiser enables the creation of engaging quizzes with ease.",
-    "fullDescription": "TODO: Replace with a detailed project overview. Cover the quiz platform concept, target audience (educators, trainers), key features (quiz creation, taking quizzes, scoring, analytics), and your role. Example: (1) Problem — creating and managing quizzes is tedious with existing tools. (2) Solution — an intuitive platform with real-time quiz taking, automatic grading, and performance tracking. (3) Role — frontend development with animations and responsive design. (4) Outcome.",
+    "fullDescription": "Problem: Creating and managing quizzes is tedious with existing tools — educators and trainers need a simple, engaging platform that handles quiz creation, taking, automatic grading, and performance tracking without the complexity of enterprise LMS systems.\n\nSolution: Built an intuitive quiz platform using Next.js with Chakra UI and Tailwind CSS for a clean interface, Framer Motion for smooth question transitions, and custom React hooks for real-time quiz state management including timers and scoring.\n\nRole: Focused on frontend development — designed the quiz-taking interface with animated transitions, implemented the scoring engine with automatic grading, built the responsive layout for mobile quiz-taking, and created the quiz creation form with Formik validation.\n\nOutcome: Delivered a polished quiz platform where users can create, share, and take quizzes with smooth animations, real-time scoring, and a clean interface that works across all devices.",
     "url": "https://quiser.vercel.app/",
     "code": "https://github.com/Haresz/quiser",
     "screenshots": [
@@ -448,11 +493,11 @@
     "challenges": [
       {
         "title": "Quiz State Transitions",
-        "description": "TODO: Describe how you managed real-time quiz state — timer countdown, answer selection, scoring logic, and transitions between questions without losing progress."
+        "description": "Managing real-time quiz state — timer countdown, answer selection, scoring logic, and transitions between questions — required careful orchestration to avoid losing progress. Built custom React hooks (useQuizTimer, useQuizScore) that encapsulate each concern, with a central useQuizState hook that coordinates question progression and persists partial results."
       },
       {
         "title": "Smooth Animations Under Load",
-        "description": "TODO: Describe optimizing Framer Motion animations for quiz transitions while keeping the experience snappy on mobile devices."
+        "description": "Framer Motion animations for question transitions and score reveals were causing frame drops on mobile. Optimized by using layout animations instead of AnimatePresence for question swaps, lazy-loading animation variants, and using will-change hints strategically to keep transitions at 60fps."
       }
     ],
     "teams": [

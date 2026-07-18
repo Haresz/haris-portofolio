@@ -14,7 +14,7 @@ import {
   CaretLeft,
 } from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ProjectData {
   title: string;
@@ -36,6 +36,9 @@ interface ProjectDetailProps {
 }
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
+  const [showAllTools, setShowAllTools] = useState(false);
+  const TOOLS_LIMIT = 6;
+
   const techItems =
     project.techBreakdown ??
     project.tools.map((t) => ({
@@ -43,13 +46,13 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
       reason: t.desc,
     }));
 
-  const hasRealChallenges = project.challenges.some(
-    (c) => !c.title.startsWith('TODO')
-  );
+  const visibleTools = showAllTools
+    ? project.tools
+    : project.tools.slice(0, TOOLS_LIMIT);
+  const hasMoreTools = project.tools.length > TOOLS_LIMIT;
 
   return (
     <Box bg="#0B0B2A" minH="100vh">
-      {/* ===== BACK NAVIGATION ===== */}
       <Box px={{ base: 8, md: 20 }} pt={6} pb={2}>
         <Link
           href="/#project"
@@ -89,12 +92,20 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         </Text>
 
         {/* Tech pills */}
-        <Stack direction="row" flexWrap="wrap" gap={2} mb={8}>
-          {project.tools.map((tool, i) => (
+        <Stack direction="row" flexWrap="wrap" gap={2} mb={8} align="center">
+          {visibleTools.map((tool, i) => (
             <span key={i} className="skill-pill text-sm">
               {tool.title.replace(/\s*:\s*$/, '')}
             </span>
           ))}
+          {hasMoreTools && (
+            <button
+              className="skill-pill-toggle text-sm"
+              onClick={() => setShowAllTools((prev) => !prev)}
+            >
+              {showAllTools ? 'Show Less' : `See More (+${project.tools.length - TOOLS_LIMIT})`}
+            </button>
+          )}
         </Stack>
 
         {/* CTA buttons */}
@@ -102,20 +113,16 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           {project.url ? (
             <Link href={project.url} target="_blank" rel="noopener noreferrer">
               <Button
-                className="btn-box-shadow"
+                className="detail-btn"
                 px={6}
                 bg="#F5199B"
                 color="white"
-                borderRadius="50px"
+                borderRadius="0"
                 size="md"
                 rightIcon={<LinkBreak size={18} />}
-                style={{ transition: 'all 0.2s ease-out' }}
                 _hover={{
                   bg: 'white',
                   color: '#F5199B',
-                  border: '1px solid #F5199B',
-                  transition: 'all 0.5s ease-out',
-                  boxShadow: '0 0',
                 }}
               >
                 Visit Live Site
@@ -125,20 +132,16 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           {project.code ? (
             <Link href={project.code} target="_blank" rel="noopener noreferrer">
               <Button
-                className="btn-riso"
+                className="detail-btn-riso"
                 px={6}
                 bg="#0B0B2A"
                 color="white"
-                borderRadius="50px"
+                borderRadius="0"
                 size="md"
                 rightIcon={<Code size={18} />}
-                style={{ transition: 'all 0.2s ease-out' }}
                 _hover={{
                   bg: 'white',
                   color: '#0B0B2A',
-                  border: '1px solid #0B0B2A',
-                  transition: 'all 0.5s ease-out',
-                  boxShadow: '0 0',
                 }}
               >
                 View Code
@@ -148,96 +151,103 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         </Stack>
       </Box>
 
-      {/* ===== HERO SCREENSHOT ===== */}
+      {/* ===== HERO SCREENSHOT — BROWSER MOCKUP ===== */}
       <Box px={{ base: 8, md: 20 }} mt={{ base: -4, md: -6 }}>
         <Image
           src={project.screenshots[0]?.src}
           alt={project.screenshots[0]?.alt}
+          className="bg-blue"
           w="100%"
-          objectFit="cover"
-          maxH="600px"
+          objectFit="contain"
+          maxH="400px"
+          display="block"
         />
       </Box>
 
-      {/* ===== OVERVIEW + TECH NARRATIVE ===== */}
+      {/* ===== OVERVIEW SECTION ===== */}
       <Box
         mx="auto"
         maxW="3xl"
         px={{ base: 8, md: 20 }}
-        py={{ base: 12, md: 20 }}
+        pt={{ base: 12, md: 20 }}
       >
-        <Heading
-          as="h2"
-          size="lg"
-          color="white"
-          fontFamily="var(--font-display)"
-          fontWeight={700}
-          mb={6}
-        >
-          Overview
-        </Heading>
-        <Text color="rgba(255,255,255,0.85)" fontSize="md" lineHeight="tall" whiteSpace="pre-line" mb={8}>
-          {project.fullDescription}
-        </Text>
-
-        {/* Tech narrative — woven into overview, not a separate section */}
-        <Heading
-          as="h3"
-          size="md"
-          color="white"
-          fontFamily="var(--font-display)"
-          fontWeight={700}
-          mb={4}
-        >
-          Tech Decisions
-        </Heading>
-        <Text color="rgba(255,255,255,0.85)" fontSize="md" lineHeight="tall">
-          {techItems.map((item, i) => (
-            <React.Fragment key={i}>
-              <strong style={{ color: '#F5199B' }}>{item.name}</strong>
-              {' — '}{item.reason}
-              {i < techItems.length - 1 ? '. ' : '.'}
-            </React.Fragment>
-          ))}
-        </Text>
+        <Box className="section-card" bg="white">
+          <Box className="section-number" color="#F5199B" mb={2}>01</Box>
+          <Heading
+            as="h2"
+            size="lg"
+            color="#0B0B2A"
+            fontFamily="var(--font-display)"
+            fontWeight={700}
+            mb={6}
+          >
+            Overview
+          </Heading>
+          <Text color="#333" fontSize="md" lineHeight="tall" whiteSpace="pre-line">
+            {project.fullDescription}
+          </Text>
+        </Box>
       </Box>
 
-      {/* ===== CHALLENGES & LEARNINGS ===== */}
+      {/* ===== TECH DECISIONS SECTION ===== */}
+      <Box mx="auto" maxW="3xl" px={{ base: 8, md: 20 }}>
+        <Box className="section-card" bg="#0B0B2A">
+          <Box className="section-number" color="#1B3FE0" mb={2}>02</Box>
+          <Heading
+            as="h2"
+            size="lg"
+            color="white"
+            fontFamily="var(--font-display)"
+            fontWeight={700}
+            mb={6}
+          >
+            Tech Decisions
+          </Heading>
+          <Stack gap={4}>
+            {techItems.map((item, i) => (
+              <Box key={i}>
+                <Text color="white" fontSize="md" lineHeight="tall">
+                  <strong style={{ color: '#F5199B' }}>{item.name}</strong>
+                  {' — '}{item.reason}
+                </Text>
+              </Box>
+            ))}
+          </Stack>
+        </Box>
+      </Box>
+
+      {/* ===== CHALLENGES & LEARNINGS SECTION ===== */}
       <Box
         mx="auto"
         maxW="3xl"
         px={{ base: 8, md: 20 }}
         pb={{ base: 16, md: 24 }}
       >
-        <Heading
-          as="h2"
-          size="lg"
-          color="white"
-          fontFamily="var(--font-display)"
-          fontWeight={700}
-          mb={6}
-        >
-          Challenges &amp; Learnings
-        </Heading>
-        {hasRealChallenges ? (
+        <Box className="section-card" bg="white">
+          <Box className="section-number" color="#F5199B" mb={2}>03</Box>
+          <Heading
+            as="h2"
+            size="lg"
+            color="#0B0B2A"
+            fontFamily="var(--font-display)"
+            fontWeight={700}
+            mb={6}
+          >
+            Challenges &amp; Learnings
+          </Heading>
           <Stack gap={6}>
             {project.challenges.map((challenge, i) => (
               <Box key={i}>
                 <Text fontWeight="700" color="#F5199B" fontSize="md" mb={1}>
                   {challenge.title}
                 </Text>
-                <Text color="rgba(255,255,255,0.8)" fontSize="md" lineHeight="relaxed">
+                <Text color="#333" fontSize="md" lineHeight="relaxed">
                   {challenge.description}
                 </Text>
               </Box>
             ))}
           </Stack>
-        ) : (
-          <Text color="rgba(255,255,255,0.5)" fontStyle="italic">
-            TODO: Add your challenges and learnings for this project. Replace the
-            placeholder content in data.json under the &quot;challenges&quot; field.
-          </Text>
-        )}
+        </Box>
       </Box>
     </Box>
   );
