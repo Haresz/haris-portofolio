@@ -15,7 +15,7 @@ export default function ExperienceContent(props: any) {
         </div>
         <div className="md:text-end md:flex-col flex md:mt-0 -mt-2">
           <Text className="md:mr-0 mr-4" color={"white"}>{props.city}</Text>
-          <Text color={"blue"}>{props.date}</Text>
+          <Text color={"pink"}>{props.date}</Text>
         </div>
       </Stack>
       <UnorderedList className="mt-4" color={"white"} fontSize={{ base: "md", md: "lg" }}>

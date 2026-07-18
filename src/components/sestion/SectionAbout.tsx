@@ -16,24 +16,22 @@ export default function SectionAbout() {
       >
         <Box flex={1}>
           <Text fontSize={{ base: 'md', md: 'lg' }} color={"white"} mb={8}>
-            I am a lifelong learner and collaborator who is passionate about
-            upgrading my skills and working with others to achieve common goals. I
-            am committed to my work and always striving to improve.
+            I'm a Software Developer with a frontend foundation, currently
+            expanding into backend development and data-driven systems. I enjoy
+            building things end-to-end and I'm always looking for the next
+            system worth understanding from the inside out.
           </Text>
           <Heading as="h3" size="lg" color={"#F5199B"} mb={6} fontFamily={"var(--font-display)"} fontWeight={700}>
             Education
           </Heading>
           <ExperienceContent
-            company="SMK Telkom Purwokerto"
-            position="Software Engineering "
-            city="Purwokerto"
-            date="Jun 2020 - Jul 2023"
+            company="Universitas Terbuka"
+            position="Sistem Informasi"
+            city="Online"
+            date="Sep 2024 - Present"
             desc={[
-              'Immersed in web and mobile app development, refining programming skills.',
-              'Held leadership positions, including Student Council President.',
-              'Actively participated in robotics clubs, enhancing problem-solving abilities.',
-              'Engaged in vibrant extracurricular activities and rigorous coursework.',
-              'Cultivated a diverse skill set, preparing for the dynamic software engineering landscape.',
+              'Building a foundation in systems analysis, databases, and information management.',
+              'Applying theoretical knowledge to practical, technology-driven problem-solving scenarios.',
             ]}
           />
           <ExperienceContent
@@ -47,7 +45,17 @@ export default function SectionAbout() {
               'Acquired expertise in API integration using Axios and Fetch.',
               'Experienced in testing with Cypress.js for reliable application performance.',
               'Skilled in database management, particularly with MySQL.',
-              'Immersed in comprehensive training at Purwadhika, honing skills for dynamic web application development.',
+            ]}
+          />
+          <ExperienceContent
+            company="SMK Telkom Purwokerto"
+            position="Software Engineering"
+            city="Purwokerto"
+            date="Jun 2020 - Jul 2023"
+            desc={[
+              'Immersed in web and mobile app development, refining programming skills.',
+              'Held leadership positions, including Student Council President.',
+              'Actively participated in robotics clubs, enhancing problem-solving abilities.',
             ]}
           />
         </Box>
