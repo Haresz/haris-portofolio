@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
 import SectionAbout from "@/components/sestion/SectionAbout";
 import SectionExperience from "@/components/sestion/SectionExperience";
 import SectionProjects from "@/components/sestion/SectionProjects";
@@ -12,12 +10,10 @@ export default function Home() {
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <Nav />
       <SectionProjects />
       <SectionExperience />
       <SectionSkill />
       <SectionAbout />
-      <Footer />
     </>
   );
 }

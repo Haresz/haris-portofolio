@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 import { fonts } from "./fonts";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
   title: "Haris's Portofolio",
@@ -16,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fonts.montserrat.variable} ${fonts.spaceGrotesk.variable}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Nav />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import Nav from '@/components/Nav';
 import ProjectDetail from '@/components/ProjectDetail';
 import projectData from '../../../data.json';
 
@@ -27,7 +26,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <Nav />
       <ProjectDetail project={project} />
     </>
   );

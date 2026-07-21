@@ -39,7 +39,7 @@ export default function Footer() {
         or in my sosmed
       </Text>
       <Stack direction={"row"} flexWrap={"wrap"} gap={8} color="white">
-        <Link href={"https://www.linkedin.com/in/haris-fikri-75144b207/"}>
+        <Link href={"https://www.linkedin.com/in/muhammad-haris-al-fikri-75144b207/"}>
           <LinkedinLogo size={60} color="#0B0B2A" />
         </Link>
         <Link href={"https://wa.me/+6282225384814"}>
