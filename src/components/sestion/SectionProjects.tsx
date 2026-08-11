@@ -44,7 +44,7 @@ export default function SectionProjects() {
             fontWeight={700}
             letterSpacing={-1}
           >
-            Software Engineer
+            Frontend Developer
           </Heading>
           <Button
             className="btn-box-shadow"
