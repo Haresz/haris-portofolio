@@ -25,6 +25,12 @@ export default function SectionSkill() {
     "GitHub",
     "GitLab",
     "PostMan",
+    "Docker",
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "PostgreSQL",
+    "Go"
   ];
   return (
     <Box
