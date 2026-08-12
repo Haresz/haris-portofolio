@@ -234,11 +234,42 @@ html {
   box-shadow: 6px 6px 0px 0px #1b3fe0;
   transition: all 0.2s ease-out;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-project:hover {
   box-shadow: 2px 2px 0px 0px #1b3fe0;
   transform: translate(4px, 4px);
+}
+
+/* ===== PROJECT CARD — TOOL TAGS ===== */
+
+.tool-tag {
+  @apply inline-flex items-center px-2 py-0.5 text-xs font-bold border-2 border-navy;
+  border-radius: 2px;
+  background: #F5199B;
+  color: #0B0B2A;
+  box-shadow: 2px 2px 0px 0px #1B3FE0;
+}
+
+.tool-tag-more {
+  background: #0B0B2A;
+  color: white;
+}
+
+/* ===== PROJECT CARD — BUTTONS ===== */
+
+.card-btn {
+  border: 2px solid #0B0B2A;
+  border-radius: 0;
+  box-shadow: 3px 3px 0px 0px #0B0B2A;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.card-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px #0B0B2A;
 }
 
 /* ===== PROJECT DETAIL — NEOBRUTALISM BUTTONS ===== */

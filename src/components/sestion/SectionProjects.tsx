@@ -1,6 +1,7 @@
 'use client';
 import { Box, Button, Heading, Image, Stack } from '@chakra-ui/react';
-import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState } from 'react';
 import useDownloader from 'react-use-downloader';
 import Project from '../Project';
 import Title from '../Title';
@@ -10,9 +11,15 @@ export default function SectionProjects() {
   const { download } = useDownloader();
   const fileUrl = '/MuhammadHarisCV.pdf';
   const filename = 'MuhammadHarisCV.pdf';
+  const [showMore, setShowMore] = useState(false);
+
+  const featuredProjects = projectData.filter((project) => project.featured);
+  const otherProjects = projectData.filter((project) => !project.featured);
+  const gridClass = 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8';
 
   return (
-    <Box id="project"
+    <Box
+      id="project"
       my={{ base: 16, md: 16 }}
     >
       <Stack
@@ -91,25 +98,68 @@ export default function SectionProjects() {
       </Stack>
       <Box px={{ base: 8, md: 20 }} bg={"#0B0B2A"}>
         <Title content="Project" />
-        <Box className="flex justify-between flex-wrap gap-y-10 mt-4">
-          {projectData.map((project, index) => (
-            <div
-              key={index}
-            >
-              <Project
-                title={project.title}
-                slug={project.slug}
-                description={project.description}
-                tools={project.tools}
-                url={project.url || ""}
-                code={project.code || ""}
-                image={project.image}
-                teams={project.teams || []}
-                tagline={project.tagline || ""}
-              />
-            </div>
-
+        <div className={gridClass}>
+          {featuredProjects.map((project) => (
+            <Project
+              key={project.slug}
+              title={project.title}
+              slug={project.slug}
+              description={project.description}
+              tools={project.tools}
+              code={project.code || ""}
+              image={project.image}
+              tagline={project.tagline || ""}
+            />
           ))}
+        </div>
+
+        <Heading
+          as="h3"
+          size={{ base: 'md', md: 'lg' }}
+          mt={16}
+          mb={8}
+          color={'white'}
+          fontFamily={'var(--font-display)'}
+          fontWeight={700}
+        >
+          Other Experiments &amp; Practice Projects
+        </Heading>
+
+        <AnimatePresence initial={false}>
+          {showMore && (
+            <motion.div
+              key="other-grid"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.35, ease: 'easeInOut' }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div className={`${gridClass} mb-10`}>
+                {otherProjects.map((project) => (
+                  <Project
+                    key={project.slug}
+                    title={project.title}
+                    slug={project.slug}
+                    description={project.description}
+                    tools={project.tools}
+                    code={project.code || ""}
+                    image={project.image}
+                    tagline={project.tagline || ""}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <Box pb={16} textAlign="center">
+          <Button
+            className="skill-pill-toggle"
+            onClick={() => setShowMore((prev) => !prev)}
+          >
+            {showMore ? 'Show Less' : 'See More Projects'}
+          </Button>
         </Box>
       </Box>
     </Box>

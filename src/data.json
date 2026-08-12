@@ -2,6 +2,7 @@
   {
   "title": "CLT Panel Properties Calculator",
   "slug": "clt-panel-properties-calculator",
+  "featured": true,
   "tagline": "Structural analysis tool for Cross Laminated Timber panels per Eurocode 5",
   "description": "An OOP JavaScript calculator that implements two structural engineering methods Shear Analogy and Gamma Method (Eurocode 5)  to analyze Cross Laminated Timber (CLT) panel properties. Converts a previously Excel-based engineering model into an interactive, browser-based tool.",
   "fullDescription": "Problem: Structural engineers evaluating CLT panels relied on a rigid Excel-based model to calculate panel properties using Shear Analogy and Gamma Method (Eurocode 5). This made the workflow error-prone, hard to validate, and difficult to extend to new layer configurations.\n\nSolution: Built a web-based calculator from scratch in vanilla JavaScript using OOP principles, after a 3-day intensive research process into a completely new engineering domain (structural timber analysis) I had no prior background in. Designed decoupled layer/layup classes to represent CLT panel composition, each with custom validation rules specific to the constraints of each calculation method. The tool independently re-derives and validates the same complex calculations as the original Excel model.\n\nRole: Sole developer — researched the domain (Eurocode 5 structural formulas), designed the OOP architecture, and implemented both calculation methods end-to-end.\n\nOutcome: A working calculator that reproduces and validates complex structural engineering calculations previously locked in a spreadsheet, submitted as a technical assessment and demonstrating the ability to acquire deep domain knowledge in an unfamiliar field under time constraint.",
@@ -44,6 +45,7 @@
  {
     "title": "Personal Finance Tracker",
     "slug": "personal-finance-tracker",
+    "featured": false,
     "tagline": "A comprehensive financial management application",
     "description": "A modern, full-stack React application for tracking personal finances with a clean, intuitive interface. Built with React, Vite, and Tailwind CSS, this app helps you manage your income and expenses efficiently with real-time data synchronization using Google Sheets as the backend.",
     "fullDescription": "Problem: Tracking personal cashflow and habits often requires complex software or manual entry that is hard to maintain on a daily basis.\n\nSolution: Developed a custom ledger application that seamlessly integrates a web frontend with Google Sheets. The backend logic utilizes Google Apps Script (GAS) with custom doGet and doPost functions, including reliable UUID generation for transaction tracking. The UI is designed with a minimalist, 3D flat aesthetic to keep the user experience focused and clean.\n\nRole: Sole developer handling both the frontend interface and the GAS backend integration.\n\nOutcome: A fast, responsive tracking tool that centralizes financial data directly into personal spreadsheets without relying on third-party databases.",
@@ -90,6 +92,7 @@
   {
     "title": "Planify AI – Modern Landing Page",
     "slug": "planify-ai-landing-page",
+    "featured": false,
     "tagline": "A sleek, high-conversion landing page",
     "description": "A sleek, high-conversion landing page designed for Planify AI, an upcoming AI-powered productivity and planning application. This repository focuses strictly on frontend excellence, demonstrating how to build a compelling first impression for a digital product through modern web design principles.",
     "fullDescription": "Problem: New digital products require a strong, compelling visual presence to capture user interest and drive early conversions.\n\nSolution: Engineered a sleek landing page tailored for an AI productivity app. The focus was entirely on frontend execution, ensuring that animations, typography, and layout work cohesively to deliver a premium feel.\n\nRole: Frontend Developer responsible for translating design concepts into a high-performance web page.",
@@ -127,6 +130,7 @@
   {
     "title": "Go Cashflow REST API",
     "slug": "go-cashflow-rest-api",
+    "featured": true,
     "tagline": "A robust backend service for financial tracking",
     "description": "A RESTful API built entirely with Go (Golang) designed to handle financial data operations, specifically focusing on managing and tracking cashflow efficiently.",
     "fullDescription": "This project represents a deep dive into backend development utilizing Go. It provides the core API infrastructure necessary for a cashflow tracking application, handling routing, data validation, and database interactions with high performance.",
@@ -160,6 +164,7 @@
   {
     "title": "Go Goroutines API Test",
     "slug": "go-goroutines-api-test",
+    "featured": true,
     "tagline": "Exploring concurrency and performance in Go",
     "description": "An experimental backend project created to test and implement Go's concurrency model, utilizing goroutines to optimize API performance and handle multiple tasks simultaneously.",
     "fullDescription": "This repository serves as a technical sandbox for mastering concurrent programming in Go. By implementing goroutines, the project explores how to efficiently handle concurrent API requests, testing the limits and performance benefits of Go's lightweight thread management.",
@@ -189,6 +194,7 @@
   {
     "title": "Quizies",
     "slug": "quizies",
+    "featured": false,
     "tagline": "An interactive and engaging quiz platform",
     "description": "A modern web application designed to deliver an engaging and seamless quiz-taking experience. Built with a focus on fast performance and an intuitive user interface, Quizies allows users to test their knowledge interactively with real-time feedback.",
     "fullDescription": "Problem: Many quiz platforms suffer from cluttered interfaces and slow transitions, which detract from the learning and assessment experience.\n\nSolution: Developed a streamlined, highly responsive quiz application using modern frontend technologies. The platform features dynamic question rendering, real-time score tracking, and a clean, accessible design (incorporating 3D flat aesthetics) that keeps users focused on the content.\n\nRole: Frontend Developer responsible for the end-to-end user interface, animation transitions, and state management.\n\nOutcome: A fast, mobile-friendly interactive quiz platform that provides instant feedback and a smooth user journey from the first question to the final result.",
@@ -227,6 +233,7 @@
   {
     "title": "The Blog",
     "slug": "the-blog",
+    "featured": false,
     "tagline": "A full-featured blog platform with CRUD and pagination",
     "description": "Website Blog is a web application developed using Next.js framework, Chakra UI for styling, and Redux Toolkit for state management. It allows users to create, edit, and view blog posts. The application provides a user-friendly interface with features like pagination and responsive design.",
     "fullDescription": "Problem: There was a need for a clean, performant blog platform that supports full CRUD operations — creating, reading, updating, and deleting posts — with user authentication and paginated content discovery.\n\nSolution: Built a full-featured blog using Next.js with Chakra UI for a polished interface, Redux Toolkit for state management across auth and post data, Formik with Yup for validated forms, and js-cookie for session persistence.\n\nRole: Developed the entire frontend — implemented cookie-based authentication flow, built the Redux slices for posts and user state, designed the paginated post listing with infinite scroll, and created the form system with Formik and Yup validation schemas.\n\nOutcome: Delivered a fully functional blog platform where users can register, log in, create and edit posts, and browse content with smooth pagination.",
@@ -297,6 +304,7 @@
   {
     "title": "Event Management",
     "slug": "event-management",
+    "featured": false,
     "tagline": "An MVP platform for creating, promoting, and attending events",
     "description": "The main goal of the MVP is to create a simple and functional event management platform that allows event organizers to create and promote events, while attendees can browse and register for those events.",
     "fullDescription": "Problem: Event organizers lacked a simple, centralized platform to create, promote, and manage events while attendees needed an easy way to discover and register for events in their area.\n\nSolution: Built an MVP event management platform using Next.js with a full Express.js backend, MySQL database with Prisma ORM, and TypeScript throughout. Features include event CRUD for organizers, a registration flow for attendees, search with filters, and role-based access control.\n\nRole: Handled fullstack development — designed the Prisma schema for events, registrations, and users, built the Express.js REST API with authentication middleware, and implemented the Next.js frontend with Redux state management and Formik forms.\n\nOutcome: Delivered a functional MVP platform that handles event creation, discovery, and registration with a clean separation between organizer and attendee experiences.",
@@ -380,6 +388,7 @@
   {
     "title": "Resthere",
     "slug": "resthere",
+    "featured": true,
     "tagline": "Your Ideal Place to Rest — a hotel booking platform",
     "description": "RestHere is a user-friendly platform for booking hotels, villas, and homestays. Embracing a \"stay for everyone\" philosophy, we offer a clean and accessible design to ensure a seamless experience for all users. Whether you're traveling or staying local, RestHere helps you find and book the perfect place to rest with ease.",
     "fullDescription": "Problem: Travelers struggle to find and book accommodations across scattered platforms — hotels, villas, and homestays each have their own booking systems, making it hard to compare options and find the best place to stay.\n\nSolution: Built a unified booking platform using Next.js with Leaflet interactive maps, real-time property availability, Google OAuth for frictionless sign-in, and a multi-step booking flow. The platform embraces a \"stay for everyone\" philosophy with a clean, accessible design.\n\nRole: Fullstack development using Agile methodology with two-week sprints tracked in Jira. Implemented the Express.js API with Prisma ORM, designed the MySQL schema, built the Redux state management with Thunk for async operations, and developed the frontend with Tailwind CSS.\n\nOutcome: Delivered a complete booking platform that allows users to browse properties on an interactive map, check availability, and complete bookings — all within a seamless, responsive interface.",
@@ -538,6 +547,7 @@
   {
     "title": "Quiser",
     "slug": "quiser",
+    "featured": false,
     "tagline": "Simplifying your learning journey with interactive quizzes",
     "description": "Quiser: Simplifying Your Learning Journey. Quiser is an intuitive platform designed to create and manage quizzes effortlessly. Aimed at enhancing the learning experience, it offers a clean and user-friendly interface that allows users to focus on the content. Whether for education, training, or fun, Quiser enables the creation of engaging quizzes with ease.",
     "fullDescription": "Problem: Creating and managing quizzes is tedious with existing tools — educators and trainers need a simple, engaging platform that handles quiz creation, taking, automatic grading, and performance tracking without the complexity of enterprise LMS systems.\n\nSolution: Built an intuitive quiz platform using Next.js with Chakra UI and Tailwind CSS for a clean interface, Framer Motion for smooth question transitions, and custom React hooks for real-time quiz state management including timers and scoring.\n\nRole: Focused on frontend development — designed the quiz-taking interface with animated transitions, implemented the scoring engine with automatic grading, built the responsive layout for mobile quiz-taking, and created the quiz creation form with Formik validation.\n\nOutcome: Delivered a polished quiz platform where users can create, share, and take quizzes with smooth animations, real-time scoring, and a clean interface that works across all devices.",
