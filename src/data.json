@@ -1,4 +1,46 @@
 [
+  {
+  "title": "CLT Panel Properties Calculator",
+  "slug": "clt-panel-properties-calculator",
+  "tagline": "Structural analysis tool for Cross Laminated Timber panels per Eurocode 5",
+  "description": "An OOP JavaScript calculator that implements two structural engineering methods Shear Analogy and Gamma Method (Eurocode 5)  to analyze Cross Laminated Timber (CLT) panel properties. Converts a previously Excel-based engineering model into an interactive, browser-based tool.",
+  "fullDescription": "Problem: Structural engineers evaluating CLT panels relied on a rigid Excel-based model to calculate panel properties using Shear Analogy and Gamma Method (Eurocode 5). This made the workflow error-prone, hard to validate, and difficult to extend to new layer configurations.\n\nSolution: Built a web-based calculator from scratch in vanilla JavaScript using OOP principles, after a 3-day intensive research process into a completely new engineering domain (structural timber analysis) I had no prior background in. Designed decoupled layer/layup classes to represent CLT panel composition, each with custom validation rules specific to the constraints of each calculation method. The tool independently re-derives and validates the same complex calculations as the original Excel model.\n\nRole: Sole developer — researched the domain (Eurocode 5 structural formulas), designed the OOP architecture, and implemented both calculation methods end-to-end.\n\nOutcome: A working calculator that reproduces and validates complex structural engineering calculations previously locked in a spreadsheet, submitted as a technical assessment and demonstrating the ability to acquire deep domain knowledge in an unfamiliar field under time constraint.",
+  "url": null,
+  "code": "https://github.com/Haresz/calculator-clt",
+  "screenshots": [
+    { "src": "/clt-calculator.jpg", "alt": "CLT Panel Calculator interface" }
+  ],
+  "tools": [
+    {
+      "title": "JavaScript (Vanilla, OOP)",
+      "desc": "Core language used to implement the calculator logic using object-oriented design, with no external framework dependency."
+    },
+    {
+      "title": "Eurocode 5 Standards",
+      "desc": "Structural engineering standard defining the Shear Analogy and Gamma Method formulas implemented in the calculator."
+    }
+  ],
+  "techBreakdown": [
+    { "name": "Vanilla JS + OOP", "reason": "Chosen to keep the calculation engine framework-agnostic and to model panel/layer relationships cleanly through class-based structures, mirroring how engineers conceptually break down CLT layups." },
+    { "name": "Decoupled Layer/Layup Classes", "reason": "Separating layer and layup logic allowed each calculation method's specific constraints to be validated independently, preventing cross-method configuration errors." }
+  ],
+  "challenges": [
+    {
+      "title": "Learning a New Engineering Domain Under Time Pressure",
+      "description": "Had no prior background in structural timber engineering. Had to research Shear Analogy and Gamma Method from Eurocode 5 documentation, understand the underlying physics, and translate that into correct, testable code within a 3-day window."
+    },
+    {
+      "title": "Validating Against an Existing Excel Model",
+      "description": "The calculator's outputs needed to match the original spreadsheet's results exactly. This required independently re-deriving the formulas rather than blindly porting spreadsheet logic, catching and correcting a discrepancy in the process."
+    },
+    {
+      "title": "Method-Specific Layer Constraints",
+      "description": "Shear Analogy and Gamma Method impose different validity rules on layer configuration (e.g. layer count, orientation). Designing a class structure flexible enough to enforce both methods' constraints without duplicating logic was a key architectural decision."
+    }
+  ],
+  "teams": null,
+  "image": "/clt-calculator.jpg"
+},
  {
     "title": "Personal Finance Tracker",
     "slug": "personal-finance-tracker",
