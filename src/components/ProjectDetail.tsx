@@ -37,6 +37,7 @@ interface ProjectDetailProps {
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
   const [showAllTools, setShowAllTools] = useState(false);
+  const [activeShot, setActiveShot] = useState<number | null>(null);
   const TOOLS_LIMIT = 6;
 
   const techItems =
@@ -51,27 +52,32 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
     : project.tools.slice(0, TOOLS_LIMIT);
   const hasMoreTools = project.tools.length > TOOLS_LIMIT;
 
+  const screenshots = project.screenshots ?? [];
+
   return (
     <Box bg="#0B0B2A" minH="100vh">
-      <Box px={{ base: 8, md: 20 }} pt={6} pb={2}>
-        <Link
-          href="/#project"
-          className="inline-flex items-center gap-2 font-semibold no-underline"
-          style={{ color: 'rgba(255,255,255,0.7)' }}
-        >
-          <CaretLeft size={20} />
-          <span>Back to Portfolio</span>
-        </Link>
-      </Box>
-
       {/* ===== HERO SECTION ===== */}
       <Box
         className="grain"
         bg="#0B0B2A"
         px={{ base: 8, md: 20 }}
-        pt={{ base: 6, md: 8 }}
+        pt={{ base: 24, md: 28 }}
         pb={{ base: 10, md: 14 }}
       >
+        {/* Back button — normal flow, clears fixed nav */}
+        <Link href="/#project" className="inline-flex w-fit no-underline">
+          <Button
+            className="card-btn"
+            size="sm"
+            bg="white"
+            color="#0B0B2A"
+            leftIcon={<CaretLeft size={16} weight="bold" />}
+            _hover={{ bg: '#F5199B', color: 'white' }}
+          >
+            Back to Portfolio
+          </Button>
+        </Link>
+
         <Heading
           as="h1"
           size={{ base: 'xl', md: '2xl' }}
@@ -79,6 +85,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           fontFamily="var(--font-display)"
           fontWeight={700}
           mb={4}
+          mt={{ base: 6, md: 8 }}
         >
           {project.title}
         </Heading>
@@ -91,20 +98,25 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           {project.tagline}
         </Text>
 
-        {/* Tech pills */}
+        {/* Tech pills — small badges */}
         <Stack direction="row" flexWrap="wrap" gap={2} mb={8} align="center">
           {visibleTools.map((tool, i) => (
-            <span key={i} className="skill-pill text-sm">
+            <span key={i} className="tool-tag">
               {tool.title.replace(/\s*:\s*$/, '')}
             </span>
           ))}
           {hasMoreTools && (
-            <button
-              className="skill-pill-toggle text-sm"
+            <Button
+              className="card-btn"
+              size="sm"
+              bg="#0B0B2A"
+              color="white"
               onClick={() => setShowAllTools((prev) => !prev)}
             >
-              {showAllTools ? 'Show Less' : `See More (+${project.tools.length - TOOLS_LIMIT})`}
-            </button>
+              {showAllTools
+                ? 'Show Less'
+                : `See More (+${project.tools.length - TOOLS_LIMIT})`}
+            </Button>
           )}
         </Stack>
 
@@ -151,17 +163,43 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         </Stack>
       </Box>
 
-      {/* ===== HERO SCREENSHOT — BROWSER MOCKUP ===== */}
+      {/* ===== SCREENSHOTS ===== */}
       <Box px={{ base: 8, md: 20 }} mt={{ base: -4, md: -6 }}>
-        <Image
-          src={project.screenshots[0]?.src}
-          alt={project.screenshots[0]?.alt}
-          className="bg-blue"
-          w="100%"
-          objectFit="contain"
-          maxH="400px"
-          display="block"
-        />
+        {screenshots.length > 0 ? (
+          screenshots.length === 1 ? (
+            <Box
+              className="flex justify-center m-4 cursor-zoom-in"
+              onClick={() => setActiveShot(0)}
+            >
+              <Image
+                src={screenshots[0].src}
+                alt={screenshots[0].alt}
+                objectFit="cover"
+                maxH="420px"
+                display="block"
+              />
+            </Box>
+          ) : (
+            <Box className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {screenshots.map((shot, i) => (
+                <Box
+                  key={i}
+                  className="cursor-zoom-in"
+                  onClick={() => setActiveShot(i)}
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    w="100%"
+                    objectFit="contain"
+                    maxH="400px"
+                    display="block"
+                  />
+                </Box>
+              ))}
+            </Box>
+          )
+        ) : null}
       </Box>
 
       {/* ===== OVERVIEW SECTION ===== */}

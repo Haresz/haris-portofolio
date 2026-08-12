@@ -395,9 +395,7 @@
     "url": "https://jcwdol130205.purwadhikabootcamp.com/",
     "code": "https://github.com/fabianindra/finalproject",
     "screenshots": [
-      { "src": "/project5.png", "alt": "Homepage screenshot" },
-      { "src": "/project5.png", "alt": "Booking flow screenshot" },
-      { "src": "/project5.png", "alt": "Map view screenshot" }
+      { "src": "/project5.png", "alt": "Homepage screenshot" }
     ],
     "tools": [
       {
