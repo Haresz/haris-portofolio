@@ -128,69 +128,66 @@
     "image": "/planify-ai.png"
   },
   {
-    "title": "Go Cashflow REST API",
-    "slug": "go-cashflow-rest-api",
-    "featured": true,
-    "tagline": "A robust backend service for financial tracking",
-    "description": "A RESTful API built entirely with Go (Golang) designed to handle financial data operations, specifically focusing on managing and tracking cashflow efficiently.",
-    "fullDescription": "This project represents a deep dive into backend development utilizing Go. It provides the core API infrastructure necessary for a cashflow tracking application, handling routing, data validation, and database interactions with high performance.",
-    "url": "https://go-cashflow-rest-api.vercel.app",
-    "code": "https://github.com/Haresz/go-cashflow-rest-api",
-    "screenshots": [
-      { "src": "/go-cashflow-api.jpg", "alt": "API Architecture and Postman testing screenshot" }
-    ],
-    "tools": [
-      {
-        "title": "Go (Golang)",
-        "desc": "The statically typed, compiled programming language used to build the high-performance API."
-      }
-    ],
-    "techBreakdown": [
-      { "name": "Go (Golang)", "reason": "Selected for its simplicity, fast execution speed, and excellent standard library for building REST APIs." }
-    ],
-    "challenges": [
-      {
-        "title": "Structuring Go Application for Scalability",
-        "description": "Designing a clean architecture that separates routing, business logic, and database access was initially challenging. Solved by adopting a standard Go project layout with distinct packages for handlers, services, and models."
-      },
-      {
-        "title": "Efficient JSON Payload Parsing",
-        "description": "Handling variable JSON structures for different financial transactions required careful data validation. Implemented Go structs with strict JSON tags and custom validation logic to ensure data integrity before database insertion."
-      }
-    ],
-    "teams": null,
-    "image": "/go-cashflow-api.jpg"
-  },
+  "title": "Go Cashflow REST API",
+  "slug": "go-cashflow-rest-api",
+  "featured": true,
+  "tagline": "A robust backend service for financial tracking",
+  "description": "A RESTful API built entirely with Go (Golang) designed to handle financial data operations, specifically focusing on managing and tracking cashflow efficiently.",
+  "fullDescription": "Problem: Personal cashflow tracking tools often rely on slow, resource-heavy backends that don't scale well, making it hard to reliably process and validate financial transaction data.\n\nSolution: Built a RESTful API from scratch in Go, structured with a layered architecture separating handlers, services, and models. Implemented struct-based JSON validation to catch malformed transaction payloads before they reach the database, and designed the routing layer to support standard CRUD operations for cashflow entries with clean error handling.\n\nRole: Sole developer — designed the project structure, implemented the API endpoints, and built the validation layer to enforce data integrity across all transaction requests.\n\nOutcome: A performant, well-structured API that reliably handles cashflow data operations, serving as a hands-on foundation for transitioning from frontend-only work into backend engineering with Go.",
+  "url": "https://go-cashflow-rest-api.vercel.app",
+  "code": "https://github.com/Haresz/go-cashflow-rest-api",
+  "screenshots": [
+    { "src": "/go-cashflow-api.jpg", "alt": "API Architecture and Postman testing screenshot" }
+  ],
+  "tools": [
+    { "title": "Go (Golang)", "desc": "The statically typed, compiled programming language used to build the high-performance API." }
+  ],
+  "techBreakdown": [
+    { "name": "Go (Golang)", "reason": "Selected for its simplicity, fast execution speed, and excellent standard library for building REST APIs without heavy framework overhead." },
+    { "name": "Layered Architecture (handlers/services/models)", "reason": "Separating concerns this way keeps business logic testable and independent from HTTP routing, making the API easier to extend with new endpoints." },
+    { "name": "Struct-based JSON Validation", "reason": "Using Go structs with strict field tags catches malformed or incomplete transaction payloads early, before they touch the database layer." }
+  ],
+  "challenges": [
+    {
+      "title": "Structuring Go Application for Scalability",
+      "description": "Designing a clean architecture that separates routing, business logic, and database access was initially challenging. Solved by adopting a standard Go project layout with distinct packages for handlers, services, and models."
+    },
+    {
+      "title": "Efficient JSON Payload Parsing",
+      "description": "Handling variable JSON structures for different financial transactions required careful data validation. Implemented Go structs with strict JSON tags and custom validation logic to ensure data integrity before database insertion."
+    }
+  ],
+  "teams": null,
+  "image": "/go-cashflow-api.jpg"
+},
   {
-    "title": "Go Goroutines API Test",
-    "slug": "go-goroutines-api-test",
-    "featured": true,
-    "tagline": "Exploring concurrency and performance in Go",
-    "description": "An experimental backend project created to test and implement Go's concurrency model, utilizing goroutines to optimize API performance and handle multiple tasks simultaneously.",
-    "fullDescription": "This repository serves as a technical sandbox for mastering concurrent programming in Go. By implementing goroutines, the project explores how to efficiently handle concurrent API requests, testing the limits and performance benefits of Go's lightweight thread management.",
-    "url": null,
-    "code": "https://github.com/Haresz/go-goroutines-api-test",
-    "screenshots": [
-      { "src": "/goroutines-api-test.jpg", "alt": "Concurrency testing and log output screenshot" }
-    ],
-    "tools": [
-      {
-        "title": "Go (Golang)",
-        "desc": "Used specifically to leverage its native concurrency features (goroutines and channels)."
-      }
-    ],
-    "techBreakdown": [
-      { "name": "Goroutines", "reason": "Implemented to handle asynchronous operations and concurrent requests without blocking the main execution thread." }
-    ],
-    "challenges": [
-      {
-        "title": "Grasping Asynchronous Concepts in Go",
-        "description": "The steepest learning curve was fundamentally understanding how asynchronous programming works in Go. It took dedicated time and practice to shift from synchronous thinking to fully comprehending how goroutines operate and execute concurrently without blocking the main process."
-      }
-    ],
-    "teams": null,
-    "image": "/goroutines-api-test.jpg"
-  },
+  "title": "Go Goroutines API Test",
+  "slug": "go-goroutines-api-test",
+  "featured": true,
+  "tagline": "Exploring concurrency and performance in Go",
+  "description": "An experimental backend project created to test and implement Go's concurrency model, utilizing goroutines to optimize API performance and handle multiple tasks simultaneously.",
+  "fullDescription": "Problem: Handling multiple concurrent API requests efficiently is a common backend challenge, and coming from a JavaScript/async-await background, Go's concurrency model (goroutines and channels) required a fundamentally different mental model to grasp properly.\n\nSolution: Built a technical sandbox project specifically to test and internalize Go's concurrency primitives. Implemented goroutines to handle simultaneous API requests without blocking the main thread, and used channels to safely coordinate data between concurrent operations — moving deliberately from synchronous, sequential thinking to Go's lightweight-thread concurrency model.\n\nRole: Sole developer — designed the test scenarios, implemented concurrent request handling with goroutines, and validated behavior under simulated concurrent load.\n\nOutcome: A working proof-of-concept demonstrating practical understanding of Go's concurrency model, and a clear before/after in how I reason about asynchronous backend operations compared to JavaScript's event loop.",
+  "url": null,
+  "code": "https://github.com/Haresz/go-goroutines-api-test",
+  "screenshots": [
+    { "src": "/goroutines-api-test.jpg", "alt": "Concurrency testing and log output screenshot" }
+  ],
+  "tools": [
+    { "title": "Go (Golang)", "desc": "Used specifically to leverage its native concurrency features (goroutines and channels)." }
+  ],
+  "techBreakdown": [
+    { "name": "Goroutines", "reason": "Implemented to handle asynchronous, concurrent operations without blocking the main execution thread — Go's lightweight alternative to OS threads." },
+    { "name": "Channels", "reason": "Used to safely pass data between goroutines and coordinate concurrent operations, avoiding race conditions without relying on explicit locks." }
+  ],
+  "challenges": [
+    {
+      "title": "Grasping Asynchronous Concepts in Go",
+      "description": "The steepest learning curve was fundamentally understanding how asynchronous programming works in Go. It took dedicated time and practice to shift from synchronous thinking to fully comprehending how goroutines operate and execute concurrently without blocking the main process."
+    }
+  ],
+  "teams": null,
+  "image": "/goroutines-api-test.jpg"
+},
   {
     "title": "Quizies",
     "slug": "quizies",
@@ -552,7 +549,6 @@
     "url": "https://quiser.vercel.app/",
     "code": "https://github.com/Haresz/quiser",
     "screenshots": [
-      { "src": "/project6.jpg", "alt": "Homepage screenshot" },
       { "src": "/project6.jpg", "alt": "Quiz creation interface screenshot" }
     ],
     "tools": [
